@@ -1,4 +1,4 @@
-package com.yakesh.AssetManagement.Entity;
+package com.hexaware.assetmanagement.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,54 +12,62 @@ public class Credential {
 	
 	@Id
     private int userId;
-
+	@Column(nullable = false, unique=true,name = "user_name")
+    private String userName;
+	@Column(nullable = false, unique=true)
+    private String password;
+	
     @OneToOne
     @MapsId
-    @JoinColumn(name = "userId")
+    @JoinColumn(name="userId")
     private Users user;
-    
-    private String userName;
-    private String password;
-	public Credential(int userId, Users user, String userName, String password) {
+
+	public Credential(int userId, String userName, String password, Users user) {
 		super();
 		this.userId = userId;
-		this.user = user;
 		this.userName = userName;
 		this.password = password;
+		this.user = user;
 	}
-	public Credential() {
-		super();
-	}
+
 	public int getUserId() {
 		return userId;
 	}
+
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public Users getUser() {
-		return user;
-	}
-	public void setUser(Users user) {
-		this.user = user;
-	}
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Users getUser() {
+		return user;
+	}
+
+	public void setUser(Users user) {
+		this.user = user;
+	}
+
 	@Override
 	public String toString() {
-		return "Credential [userId=" + userId + ", user=" + user + ", userName=" + userName + ", password=" + password
+		return "Credential [userId=" + userId + ", userName=" + userName + ", password=" + password + ", user=" + user
 				+ "]";
 	}
-	
+    
     
 	
 }
