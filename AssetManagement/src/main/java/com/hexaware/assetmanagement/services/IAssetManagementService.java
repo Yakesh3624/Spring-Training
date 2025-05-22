@@ -12,7 +12,7 @@ import com.hexaware.assetmanagement.entities.Credential;
 import com.hexaware.assetmanagement.entities.ServiceRequest;
 import com.hexaware.assetmanagement.entities.Users;
 
-@Service
+
 public interface IAssetManagementService {
 	
 	Users addUser(Users user);
@@ -24,7 +24,7 @@ public interface IAssetManagementService {
 	Credential addCredential(Credential credential);
 	Credential getCredentialByUserId(int userId);
 	Credential authenticate(String userName, String password);
-	String updatePassword(int userName, String password);
+	int updatePassword(String userName, String password);
 	String deleteCredential(int userId);
 	
 	Asset addAsset(Asset asset);
