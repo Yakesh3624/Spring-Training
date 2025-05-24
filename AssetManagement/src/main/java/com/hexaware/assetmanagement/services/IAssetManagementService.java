@@ -3,29 +3,14 @@ package com.hexaware.assetmanagement.services;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.hexaware.assetmanagement.entities.Asset;
 import com.hexaware.assetmanagement.entities.AssetAllocation;
 import com.hexaware.assetmanagement.entities.AuditRequest;
-import com.hexaware.assetmanagement.entities.Credential;
 import com.hexaware.assetmanagement.entities.ServiceRequest;
-import com.hexaware.assetmanagement.entities.Users;
 
 
 public interface IAssetManagementService {
 	
-	Users addUser(Users user);
-	Users getUserById(int userId);
-	List<Users> getAllUsers();
-	Users updateUser(Users user);
-	String deleteUser(int userId);
-	
-	Credential addCredential(Credential credential);
-	Credential getCredentialByUserId(int userId);
-	Credential authenticate(String userName, String password);
-	int updatePassword(String userName, String password);
-	String deleteCredential(int userId);
 	
 	Asset addAsset(Asset asset);
 	Asset getAssetByNo(int assetNo);

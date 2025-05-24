@@ -1,4 +1,4 @@
-package com.hexaware.assetmanagement.restcontrollers;
+package com.hexaware.AdminMicrocontroller.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hexaware.assetmanagement.entities.Credential;
-import com.hexaware.assetmanagement.services.IAssetManagementService;
+import com.hexaware.AdminMicrocontroller.entities.Credential;
+import com.hexaware.AdminMicrocontroller.service.IAdminService;
 
 @RestController
 @RequestMapping("/api/credentaial")
 public class CredentialRestController {
 	
 	@Autowired
-	IAssetManagementService service;
+	IAdminService service;
 	
 	@PostMapping("/add")
 	Credential addCredential(@RequestBody Credential credential)
@@ -26,10 +26,10 @@ public class CredentialRestController {
 		return service.addCredential(credential);
 	}
 	
-	@GetMapping("/get/{userId}")
-	Credential getCredentialByUserId(@PathVariable int userId)
+	@GetMapping("/get/{adminId}")
+	Credential getCredentialByAdminId(@PathVariable int adminId)
 	{
-		return service.getCredentialByUserId(userId);
+		return service.getCredentialByAdminId(adminId);
 	}
 	
 	@GetMapping("/authenticate/{userName}/{password}")
@@ -39,15 +39,15 @@ public class CredentialRestController {
 	}
 	
 	@PutMapping("/update/{userName}/{password}")
-	String updatePassword(@PathVariable int userName,@PathVariable String password)
+	int updatePassword(@PathVariable String userName,@PathVariable String password)
 	{
 		return service.updatePassword(userName, password);
 	}
 	
-	@DeleteMapping("/delete/{userId}")
-	String deleteCredential(@PathVariable int userId)
+	@DeleteMapping("/delete/{adminId}")
+	String deleteCredential(@PathVariable int adminId)
 	{
-		return service.deleteCredential(userId);
+		return service.deleteCredential(adminId);
 	}
 
 }

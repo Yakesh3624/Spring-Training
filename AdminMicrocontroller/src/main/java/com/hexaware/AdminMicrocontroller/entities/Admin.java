@@ -1,22 +1,20 @@
-package com.hexaware.assetmanagement.entities;
+package com.hexaware.AdminMicrocontroller.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Users {
+public class Admin {
 
 	@Id
-	private int userId;
+	private int adminId;
 	@Column(nullable = false,name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")
 	private String lastName;
 	@Column(nullable = false, unique=true)
 	private String email;
-	@Column(nullable = false,name = "role")
-	private String userRole;
 	@Column(nullable = false)
 	private String gender;
 	@Column(nullable = false, unique=true,name = "phone")
@@ -24,24 +22,29 @@ public class Users {
 	@Column(nullable = false)
 	private String address;
 	
-	public Users(int userId, String firstName, String lastName, String email, String userRole, String gender,
+	
+	
+	public Admin() {
+		super();
+	}
+
+	public Admin(int adminId, String firstName, String lastName, String email, String gender,
 			String contactNumner, String address) {
 		super();
-		this.userId = userId;
+		this.adminId = adminId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.userRole = userRole;
 		this.gender = gender;
 		this.contactNumner = contactNumner;
 		this.address = address;
 	}
 	
-	public int getUserId() {
-		return userId;
+	public int getAdminId() {
+		return adminId;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setAdminId(int adminId) {
+		this.adminId = adminId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -61,12 +64,7 @@ public class Users {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUserRole() {
-		return userRole;
-	}
-	public void setUserRole(String userRole) {
-		this.userRole = userRole;
-	}
+	
 	public String getGender() {
 		return gender;
 	}
@@ -88,10 +86,11 @@ public class Users {
 
 	@Override
 	public String toString() {
-		return "Users [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", userRole=" + userRole + ", gender=" + gender + ", contactNumner=" + contactNumner + ", address="
-				+ address + "]";
+		return "Admin [adminId=" + adminId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", gender=" + gender + ", contactNumner=" + contactNumner + ", address=" + address + "]";
 	}
+
+	
 	
 	
 	
