@@ -1,5 +1,7 @@
 package com.hexaware.AdminMicrocontroller.restcontroller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hexaware.AdminMicrocontroller.dto.CredentialDTO;
 import com.hexaware.AdminMicrocontroller.entities.Credential;
 import com.hexaware.AdminMicrocontroller.service.IAdminService;
 
@@ -21,19 +24,19 @@ public class CredentialRestController {
 	IAdminService service;
 	
 	@PostMapping("/add")
-	Credential addCredential(@RequestBody Credential credential)
+	CredentialDTO addCredential(@RequestBody Credential credential)
 	{
 		return service.addCredential(credential);
 	}
 	
-	@GetMapping("/get/{adminId}")
-	Credential getCredentialByAdminId(@PathVariable int adminId)
+	@GetMapping("/getbyid/{adminId}")
+	CredentialDTO getCredentialByAdminId(@PathVariable int adminId)
 	{
 		return service.getCredentialByAdminId(adminId);
 	}
 	
 	@GetMapping("/authenticate/{userName}/{password}")
-	Credential authenticate(@PathVariable String userName,@PathVariable String password)
+	CredentialDTO authenticate(@PathVariable String userName,@PathVariable String password)
 	{
 		return service.authenticate(userName, password);
 	}
@@ -48,6 +51,18 @@ public class CredentialRestController {
 	String deleteCredential(@PathVariable int adminId)
 	{
 		return service.deleteCredential(adminId);
+	}
+	
+	@GetMapping("/getbyname/{userName}")
+	CredentialDTO getCredentialByUserName(@PathVariable String userName)
+	{
+		return service.getCredentialByUserName(userName);
+	}
+	
+	@GetMapping("/getall")
+	List<CredentialDTO> getAllCredentials()
+	{
+		return service.getAllCredentials();
 	}
 
 }

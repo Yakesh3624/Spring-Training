@@ -30,10 +30,14 @@ public class ServiceRequest {
 	
 	@ManyToOne
 	@JoinColumn(name="userId")
-	Users user;
+	Employee employee;
+
+	public ServiceRequest() {
+		super();
+	}
 
 	public ServiceRequest(int requestId, String assetDscription, String issueType, String requestStatus,
-			Timestamp requestedAt, Asset asset, Users user) {
+			Timestamp requestedAt, Asset asset, Employee employee) {
 		super();
 		this.requestId = requestId;
 		this.assetDscription = assetDscription;
@@ -41,7 +45,7 @@ public class ServiceRequest {
 		this.requestStatus = requestStatus;
 		this.requestedAt = requestedAt;
 		this.asset = asset;
-		this.user = user;
+		this.employee = employee;
 	}
 
 	public int getRequestId() {
@@ -92,22 +96,22 @@ public class ServiceRequest {
 		this.asset = asset;
 	}
 
-	public Users getUser() {
-		return user;
+	public Employee getEmployee() {
+		return employee;
 	}
 
-	public void setUser(Users user) {
-		this.user = user;
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 
 	@Override
 	public String toString() {
 		return "ServiceRequest [requestId=" + requestId + ", assetDscription=" + assetDscription + ", issueType="
 				+ issueType + ", requestStatus=" + requestStatus + ", requestedAt=" + requestedAt + ", asset=" + asset
-				+ ", user=" + user + "]";
+				+ ", employee=" + employee + "]";
 	}
 	
 	
+
 	
-    
 }

@@ -27,25 +27,25 @@ public class AssetAllocationRestController {
 		return service.allocateAssetToUser(userId, assetNo, returnDate);
 	}
 	
-	@GetMapping("/allocateasset/{allocationId}")
+	@GetMapping("/getallocationbyid/{allocationId}")
 	AssetAllocation getAllocationById(int allocationId)
 	{
 		return service.getAllocationById(allocationId);
 	}
 	
-	@GetMapping("/allocateasset/getallallocations")
+	@GetMapping("/getallallocations")
 	List<AssetAllocation> getAllAllocations()
 	{
 		return service.getAllAllocations();
 	}
 	
-	@GetMapping("/allocateasset/{userId}")
-	List<AssetAllocation> getAllocationsByUserId(int userId)
+	@GetMapping("/getallocationbyemployeeid/{userId}")
+	List<AssetAllocation> getAllocationsByEmployeeId(int employeeId)
 	{
-		return service.getAllocationsByUserId(userId);
+		return service.getAllocationsByUserId(employeeId);
 	}
 	
-	@PutMapping("/allocateasset/{allocationId}")
+	@PutMapping("/return/{allocationId}")
 	String returnAsset(int allocationId)
 	{
 		return service.returnAsset(allocationId);

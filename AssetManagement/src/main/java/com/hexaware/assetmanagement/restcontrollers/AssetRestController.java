@@ -28,7 +28,7 @@ public class AssetRestController {
 		return service.addAsset(asset);
 	}
 	
-	@GetMapping("/getasset/{assetNo}")
+	@GetMapping("/getassetbyno/{assetNo}")
 	Asset getAssetByNo(@PathVariable int assetNo)
 	{
 		return service.getAssetByNo(assetNo);
@@ -40,7 +40,7 @@ public class AssetRestController {
 		return service.getAllAssets();
 	}
 	
-	@GetMapping("/getasset/{category}")
+	@GetMapping("/getassetbycategory/{category}")
 	List<Asset> getAssetsByCategory(@PathVariable String category)
 	{
 		return service.getAssetsByCategory(category);

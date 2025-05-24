@@ -39,10 +39,16 @@ public class ServiceRequestRestController {
 		return service.getAllRequests();
 	}
 	
-	@GetMapping("/getbyid/{userId}")
-	List<ServiceRequest> getAllRequestsByUserId(@PathVariable int userId)
+	@GetMapping("/getbyrequestid/{requestId}")
+	List<ServiceRequest> getAllRequestsByRequestId(@PathVariable int requestId)
 	{
-		return service.getAllRequestsByUserId(userId);
+		return service.getAllRequestsByEmployeeId(requestId);
+	}
+	
+	@GetMapping("/getbyid/{employeeId}")
+	List<ServiceRequest> getAllRequestsByEmployeeId(@PathVariable int employeeId)
+	{
+		return service.getAllRequestsByEmployeeId(employeeId);
 	}
 	
 	@GetMapping("/getbystatus/{status}")

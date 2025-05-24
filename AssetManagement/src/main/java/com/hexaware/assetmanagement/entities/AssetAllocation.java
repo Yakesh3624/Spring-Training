@@ -26,15 +26,21 @@ public class AssetAllocation {
 	
 	@ManyToOne
 	@JoinColumn(name="userID")
-	Users user;
+	Employee employee;
 
-	public AssetAllocation(int allocationId, LocalDate allocationDate, LocalDate returnDate, Asset asset, Users user) {
+	
+	
+	public AssetAllocation() {
+		super();
+	}
+
+	public AssetAllocation(int allocationId, LocalDate allocationDate, LocalDate returnDate, Asset asset, Employee employee) {
 		super();
 		this.allocationId = allocationId;
 		this.allocationDate = allocationDate;
 		this.returnDate = returnDate;
 		this.asset = asset;
-		this.user = user;
+		this.employee = employee;
 	}
 
 	public int getAllocationId() {
@@ -69,19 +75,20 @@ public class AssetAllocation {
 		this.asset = asset;
 	}
 
-	public Users getUser() {
-		return user;
+	public Employee getEmployee() {
+		return employee;
 	}
 
-	public void setUser(Users user) {
-		this.user = user;
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 
 	@Override
 	public String toString() {
 		return "AssetAllocation [allocationId=" + allocationId + ", allocationDate=" + allocationDate + ", returnDate="
-				+ returnDate + ", asset=" + asset + ", user=" + user + "]";
+				+ returnDate + ", asset=" + asset + "]";
 	}
+
 	
 	
 	

@@ -1,38 +1,26 @@
-package com.hexaware.assetmanagement.entities;
+package com.hexaware.AdminMicrocontroller.dto;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class Asset {
+public class AssetDTO {
 	
-	@Id
+	
 	private int assetNo;
-	@Column(nullable = false,name = "asset_name")
-    private String assetName;
-	@Column(nullable = false,name = "category")
-    private String assetCategory;
-	@Column(nullable = false,name = "model")
-    private String assetModel;
-	@Column(nullable = false)
-    private LocalDate manufacturingDate;
-	@Column(nullable = false)
-    private LocalDate expiryDate;
-	@Column(nullable = false)
-    private double assetValue;
-	@Column(nullable = false)
-    private String availability="available";
+	private String assetName;
+	private String assetCategory;
+	private String assetModel;
+	private LocalDate manufacturingDate;
+	private LocalDate expiryDate;
+	private double assetValue;
+	private String availability;
 	
 	
 	
-	public Asset() {
+	public AssetDTO() {
 		super();
 	}
 	
-	public Asset(int assetNo, String assetName, String assetCategory, String assetModel, LocalDate manufacturingDate,
+	public AssetDTO(int assetNo, String assetName, String assetCategory, String assetModel, LocalDate manufacturingDate,
 			LocalDate expiryDate, double assetValue,String availability) {
 		super();
 		this.assetNo = assetNo;

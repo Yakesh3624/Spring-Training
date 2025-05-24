@@ -20,19 +20,25 @@ public class AuditRequestRestController {
 	@Autowired
 	IAssetManagementService service;
 	
-	@PostMapping("/add/{userId}/{assetNo}")
-	AuditRequest addAuditRequest(@PathVariable int userId,@PathVariable int assetNo)
+	@PostMapping("/add/{employeeId}/{assetNo}")
+	AuditRequest addAuditRequest(@PathVariable int employeeId,@PathVariable int assetNo)
 	{
-		return service.addAuditRequest(userId, assetNo);
+		return service.addAuditRequest(employeeId, assetNo);
 	}
 	
-	@GetMapping("/get/{userId}")
-	List<AuditRequest> getAuditRequestsByUserId(@PathVariable int userId)
+	@GetMapping("/getbyempolyeeid/{employeeId}")
+	List<AuditRequest> getAuditRequestsByEmployeeId(@PathVariable int userId)
 	{
-		return service.getAuditRequestsByUserId(userId);
+		return service.getAuditRequestsByEmployeeId(userId);
 	}
 	
-	@GetMapping("/get/{status}")
+	@GetMapping("/getbyrequestid/{requestId}")
+	List<AuditRequest> getAuditRequestsByRequestId(@PathVariable int requestId)
+	{
+		return service.getAuditRequestsByRequestId(requestId);
+	}
+	
+	@GetMapping("/getbystatus/{status}")
 	List<AuditRequest> getAuditRequestsByStatus(@PathVariable String status)
 	{
 		return service.getAuditRequestsByStatus(status);
