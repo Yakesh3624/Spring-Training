@@ -11,42 +11,42 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hexaware.assetmanagement.entities.AssetAllocation;
+import com.hexaware.assetmanagement.dto.AssetAllocationDTO;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
 @RestController
-@RequestMapping("/api/assetallocation")
+@RequestMapping("/api/asset-allocation")
 public class AssetAllocationRestController {
 	
 	@Autowired
 	IAssetManagementService service;
 	
-	@PostMapping("/allocateasset/{userId}/{assetNo}/{returnDate}")
-	AssetAllocation allocateAssetToUser(@PathVariable int userId,@PathVariable int assetNo,@PathVariable LocalDate returnDate)
+	@PostMapping("/allocate-asset/{EmployeeId}/{assetNo}/{returnDate}")
+	AssetAllocationDTO allocateAssetToEmployee(@PathVariable int employeeId,@PathVariable int assetNo,@PathVariable LocalDate returnDate)
 	{
-		return service.allocateAssetToUser(userId, assetNo, returnDate);
+		return service.allocateAssetToEmployee(employeeId, assetNo, returnDate);
 	}
 	
-	@GetMapping("/getallocationbyid/{allocationId}")
-	AssetAllocation getAllocationById(int allocationId)
+	@GetMapping("/get-allocation-by-id/{allocationId}")
+	AssetAllocationDTO getAllocationById(int allocationId)
 	{
 		return service.getAllocationById(allocationId);
 	}
 	
-	@GetMapping("/getallallocations")
-	List<AssetAllocation> getAllAllocations()
+	@GetMapping("/getall")
+	List<AssetAllocationDTO> getAllAllocations()
 	{
 		return service.getAllAllocations();
 	}
 	
-	@GetMapping("/getallocationbyemployeeid/{userId}")
-	List<AssetAllocation> getAllocationsByEmployeeId(int employeeId)
+	@GetMapping("/get-allocation-by-employeeid/{employeeId}")
+	List<AssetAllocationDTO> getAllocationsByEmployeeId(int employeeId)
 	{
-		return service.getAllocationsByUserId(employeeId);
+		return service.getAllocationsByEmployeeId(employeeId);
 	}
 	
 	@PutMapping("/return/{allocationId}")
-	String returnAsset(int allocationId)
+	int returnAsset(int allocationId)
 	{
 		return service.returnAsset(allocationId);
 	}

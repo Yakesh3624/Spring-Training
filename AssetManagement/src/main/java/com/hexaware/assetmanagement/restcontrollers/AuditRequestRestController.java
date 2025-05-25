@@ -10,50 +10,50 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hexaware.assetmanagement.entities.AuditRequest;
+import com.hexaware.assetmanagement.dto.AuditRequestDTO;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
 @RestController
-@RequestMapping("/api/auditrequest")
+@RequestMapping("/api/audit-request")
 public class AuditRequestRestController {
 	
 	@Autowired
 	IAssetManagementService service;
 	
 	@PostMapping("/add/{employeeId}/{assetNo}")
-	AuditRequest addAuditRequest(@PathVariable int employeeId,@PathVariable int assetNo)
+	AuditRequestDTO addAuditRequest(@PathVariable int employeeId,@PathVariable int assetNo)
 	{
 		return service.addAuditRequest(employeeId, assetNo);
 	}
 	
-	@GetMapping("/getbyempolyeeid/{employeeId}")
-	List<AuditRequest> getAuditRequestsByEmployeeId(@PathVariable int userId)
+	@GetMapping("/get-by-empolyeeid/{employeeId}")
+	List<AuditRequestDTO> getAuditRequestsByEmployeeId(@PathVariable int employeeId)
 	{
-		return service.getAuditRequestsByEmployeeId(userId);
+		return service.getAuditRequestsByEmployeeId(employeeId);
 	}
 	
-	@GetMapping("/getbyrequestid/{requestId}")
-	List<AuditRequest> getAuditRequestsByRequestId(@PathVariable int requestId)
+	@GetMapping("/get-by-requestid/{requestId}")
+	List<AuditRequestDTO> getAuditRequestsByRequestId(@PathVariable int requestId)
 	{
 		return service.getAuditRequestsByRequestId(requestId);
 	}
 	
-	@GetMapping("/getbystatus/{status}")
-	List<AuditRequest> getAuditRequestsByStatus(@PathVariable String status)
+	@GetMapping("/get-by-status/{status}")
+	List<AuditRequestDTO> getAuditRequestsByStatus(@PathVariable String status)
 	{
 		return service.getAuditRequestsByStatus(status);
 	}
 	
 	@GetMapping("/getall")
-	List<AuditRequest> getAllAuditRequests()
+	List<AuditRequestDTO> getAllAuditRequests()
 	{
 		return service.getAllAuditRequests();
 	}
 	
-	@PutMapping("/updatestatus/{auditNo}/{status}")
-	AuditRequest updateAuditRequestStatus(int auditNo, String status)
+	@PutMapping("/update-status/{auditId}/{status}")
+	int updateAuditRequestStatus(int auditId, String status)
 	{
-		return service.updateAuditRequestStatus(auditNo, status);
+		return service.updateAuditRequestStatus(auditId, status);
 	}
 
 }

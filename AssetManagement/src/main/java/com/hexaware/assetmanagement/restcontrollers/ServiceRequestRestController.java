@@ -11,54 +11,55 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hexaware.assetmanagement.dto.ServiceRequestDTO;
 import com.hexaware.assetmanagement.entities.ServiceRequest;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
 @RestController
-@RequestMapping("/api/servicerequest")
+@RequestMapping("/api/service-request")
 public class ServiceRequestRestController {
 	
 	@Autowired
 	IAssetManagementService service;
 	
 	@PostMapping("/add")
-	ServiceRequest addServiceRequest(@RequestBody ServiceRequest request)
+	ServiceRequestDTO addServiceRequest(@RequestBody ServiceRequest request)
 	{
 		return service.addServiceRequest(request);
 	}
 	
 	@PutMapping("/update/{requestId}/{status}")
-	ServiceRequest updateServiceRequestStatus(@PathVariable int requestId,@PathVariable String status)
+	int updateServiceRequestStatus(@PathVariable int requestId,@PathVariable String status)
 	{
 		return service.updateServiceRequestStatus(requestId, status);
 	}
 	
 	@GetMapping("/getall")
-	List<ServiceRequest> getAllRequests()
+	List<ServiceRequestDTO> getAllRequests()
 	{
 		return service.getAllRequests();
 	}
 	
-	@GetMapping("/getbyrequestid/{requestId}")
-	List<ServiceRequest> getAllRequestsByRequestId(@PathVariable int requestId)
+	@GetMapping("/get-by-requestid/{requestId}")
+	List<ServiceRequestDTO> getAllRequestsByRequestId(@PathVariable int requestId)
 	{
 		return service.getAllRequestsByEmployeeId(requestId);
 	}
 	
-	@GetMapping("/getbyid/{employeeId}")
-	List<ServiceRequest> getAllRequestsByEmployeeId(@PathVariable int employeeId)
+	@GetMapping("/get-by-employeeid/{employeeId}")
+	List<ServiceRequestDTO> getAllRequestsByEmployeeId(@PathVariable int employeeId)
 	{
 		return service.getAllRequestsByEmployeeId(employeeId);
 	}
 	
-	@GetMapping("/getbystatus/{status}")
-	List<ServiceRequest> getAllRequestsByStatus(@PathVariable String status)
+	@GetMapping("/get-by-status/{status}")
+	List<ServiceRequestDTO> getAllRequestsByStatus(@PathVariable String status)
 	{
 		return service.getAllRequestsByStatus(status);
 	}
 	
-	@GetMapping("/getbyissuetype/{issueType}")
-	List<ServiceRequest> getAllRequestsByIssueType(@PathVariable String issueType)
+	@GetMapping("/get-by-issuetype/{issueType}")
+	List<ServiceRequestDTO> getAllRequestsByIssueType(@PathVariable String issueType)
 	{
 		return service.getAllRequestsByIssueType(issueType);
 	}

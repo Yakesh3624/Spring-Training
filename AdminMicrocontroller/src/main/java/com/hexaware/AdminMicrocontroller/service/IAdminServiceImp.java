@@ -129,7 +129,7 @@ public class IAdminServiceImp implements IAdminService {
 	@Override
 	public AssetDTO getAssetByNo(int assetNo) {
 		
-		return restTemplate.getForObject("api/asset/getassetbyno/"+assetNo, AssetDTO.class);
+		return restTemplate.getForObject("api/asset/get-asset-by-no/"+assetNo, AssetDTO.class);
 	}
 
 	@Override
@@ -139,7 +139,7 @@ public class IAdminServiceImp implements IAdminService {
 
 	@Override
 	public List<AssetDTO> getAssetsByCategory(String category) {
-		return restTemplate.getForObject("api/asset/getassetbycategory/"+category, null);
+		return restTemplate.getForObject("api/asset/get-asset-by-category/"+category, null);
 	}
 
 	@Override
@@ -152,117 +152,130 @@ public class IAdminServiceImp implements IAdminService {
 	@Override
 	public String deleteAsset(int assetNo) {
 		
-		restTemplate.delete("api/asset/getassetbycategory/"+assetNo);
+		restTemplate.delete("api/asset/delete/"+assetNo);
 		return assetNo+" deleted successfully";
 	}
 
 	@Override
 	public AssetAllocationDTO allocateAssetToUser(int userId, int assetNo, LocalDate returnDate) {
 		
-		return restTemplate.postForObject("/api/assetallocation/allocateasset/"+userId+"/"+assetNo+"/"+returnDate, null, AssetAllocationDTO.class);
+		return restTemplate.postForObject("/api/asset-allocation/allocate-asset/"+userId+"/"+assetNo+"/"+returnDate, null, AssetAllocationDTO.class);
 	}
 
 	@Override
 	public AssetAllocationDTO getAllocationById(int allocationId) {
-		return restTemplate.getForObject("/api/assetallocation/getallocationbyid/"+allocationId, AssetAllocationDTO.class);
+		return restTemplate.getForObject("/api/asset-allocation/get-allocation-by-id/"+allocationId, AssetAllocationDTO.class);
 	}
 
 	@Override
 	public List<AssetAllocationDTO> getAllAllocations() {
-		return restTemplate.getForObject("/api/assetallocation/getallallocations", null);
+		return restTemplate.getForObject("/api/asset-allocation/getall", null);
 	}
 
 	@Override
 	public List<AssetAllocationDTO> getAllocationsByEmployeeId(int employeeId) {
-		return restTemplate.getForObject("/api/assetallocation/getallocationbyemployeeid/"+employeeId, null);
+		return restTemplate.getForObject("/api/asset-allocation/get-allocation-by-employeeid/"+employeeId, null);
 	}
 
 	@Override
+	public AssetAllocationDTO grantAsset(int userId,int assetNo,LocalDate returnDate)
+	{
+		return restTemplate.postForObject("/api/asset-allocation/allocate-asset/"+userId+"/"+assetNo+"/"+returnDate, null, AssetAllocationDTO.class);
+	}
+	
+	@Override
 	public String returnAsset(int allocationId) {
 		
-		restTemplate.put("/api/assetallocation/return/"+allocationId, null);
+		restTemplate.put("/api/asset-allocation/return/"+allocationId, null);
 		return allocationId+" returned";
 	}
 
 	@Override
 	public ServiceRequestDTO addServiceRequest(ServiceRequestDTO request) {
 		
-		return restTemplate.postForObject("/api/servicerequest/add", request, ServiceRequestDTO.class);
+		return restTemplate.postForObject("/api/service-request/add", request, ServiceRequestDTO.class);
 	}
 
 	@Override
 	public ServiceRequestDTO updateServiceRequestStatus(int requestId, String status) {
 		
 		restTemplate.put("/api/servicerequest/update/"+requestId+"/"+status, ServiceRequestDTO.class);
-		return restTemplate.getForObject("/api/servicerequest/getbyrequestid/"+requestId, ServiceRequestDTO.class);
+		return restTemplate.getForObject("/api/service-request/get-by-requestid/"+requestId, ServiceRequestDTO.class);
 	}
 
 	@Override
 	public List<ServiceRequestDTO> getAllRequests() {
-		return restTemplate.getForObject("/api/servicerequest/getall", null);
+		return restTemplate.getForObject("/api/service-request/getall", null);
 	}
 
 	@Override
 	public List<ServiceRequestDTO> getAllRequestsByEmployeeId(int employeeId) {
-		return restTemplate.getForObject("/api/servicerequest/getbyid/"+employeeId, null);
+		return restTemplate.getForObject("/api/service-request/get-by-employeeid/"+employeeId, null);
 	}
 
 	@Override
 	public List<ServiceRequestDTO> getAllRequestsByStatus(String status) {
-		return restTemplate.getForObject("/api/servicerequest/getbystatus/"+status, null);
+		return restTemplate.getForObject("/api/service-request/get-by-status/"+status, null);
 	}
 
 	@Override
 	public List<ServiceRequestDTO> getAllRequestsByIssueType(String issueType) {
-		return restTemplate.getForObject("/api/servicerequest/getbyissuetype/"+issueType, null);
+		return restTemplate.getForObject("/api/service-request/get-by-issuetype/"+issueType, null);
 	}
 
 	@Override
 	public AuditRequestDTO addAuditRequest(int employeeId, int assetNo) {
 		
-		return restTemplate.postForObject("/api/auditrequest/add/"+employeeId+"/"+assetNo, null, AuditRequestDTO.class);
+		return restTemplate.postForObject("/api/audit-request/add/"+employeeId+"/"+assetNo, null, AuditRequestDTO.class);
 	}
 
 	@Override
 	public List<AuditRequestDTO> getAuditRequestsByStatus(String status) {
-		return restTemplate.getForObject("/api/auditrequest/getbystatus/"+status, null);
+		return restTemplate.getForObject("/api/audit-request/get-by-status/"+status, null);
 	}
 
 	@Override
 	public List<AuditRequestDTO> getAllAuditRequests() {
-		return restTemplate.getForObject("/api/auditrequest/getall", null);
+		return restTemplate.getForObject("/api/audit-request/getall", null);
 	}
 
 	@Override
 	public AuditRequestDTO updateAuditRequestStatus(int auditNo, String status) {
 		
-		restTemplate.put("/api/auditrequest/updatestatus"+auditNo+"/"+status, AuditRequestDTO.class);
+		restTemplate.put("/api/audit-request/update-status"+auditNo+"/"+status, AuditRequestDTO.class);
 		return null;
 	}
 	
 	@Override
 	public List<AuditRequestDTO> getAuditRequestsByEmployeeId(int employeeId) {
 	
-		return restTemplate.getForObject("/api/auditrequest", null);
+		return restTemplate.getForObject("/api/audit-request/get-by-empolyeeid", null);
 	}
 	
 	@Override
 	public List<AuditRequestDTO> getAuditRequestsByRequestId(int requestId) {
 	
-		return restTemplate.getForObject("/api/auditrequest", null);
+		return restTemplate.getForObject("/api/audit-request/get-by-requestid", null);
 	}
 
 	@Override
 	public AssetRequestDTO addAssetRequest(int employeeId, int assetNo) {
 		
-		return restTemplate.postForObject("/api/auditrequest/add"+employeeId+"/"+assetNo,null, AssetRequestDTO.class);
+		return restTemplate.postForObject("/api/assset-request/add"+employeeId+"/"+assetNo,null, AssetRequestDTO.class);
 	}
 
 	@Override
 	public List<AssetRequestDTO> getAssetRequestsByEmployeeId(int employeeId) {
 		
-		return restTemplate.getForObject("/api/auditrequest/getbyemployeeid/"+employeeId, null);
+		return restTemplate.getForObject("/api/assset-request/getbyemployeeid/"+employeeId, null);
 	}
+	
+	@Override
+	public List<AssetRequestDTO> getAssetRequestsByRequestId(int requestId) {
+		
+		return restTemplate.getForObject("/api/assset-request/getbyemployeeid/"+requestId, null);
+	}
+	
 
 	@Override
 	public List<AssetRequestDTO> getAssetRequestsByStatus(String status) {
@@ -272,21 +285,17 @@ public class IAdminServiceImp implements IAdminService {
 	@Override
 	public List<AssetRequestDTO> getAllAssetRequests() {
 		
-		return restTemplate.getForObject("/api/auditrequest/getall", null);
+		return restTemplate.getForObject("/api/assset-request/getall", null);
 	}
 
 	@Override
 	public AssetRequestDTO updateAssetRequestStatus(int auditNo, String status) {
 		
-		restTemplate.put("/api/auditrequest/updatestatus/"+auditNo+"/"+status,AssetRequestDTO.class);
+		restTemplate.put("/api/assset-request/updatestatus/"+auditNo+"/"+status,AssetRequestDTO.class);
 		return null;
 	}
 	
-	@Override
-	public AssetAllocationDTO grantAsset(int userId,int assetNo,LocalDate returnDate)
-	{
-		return restTemplate.postForObject("/api/assetallocation/allocateasset/"+userId+"/"+assetNo+"/"+returnDate, null, AssetAllocationDTO.class);
-	}
+	
 	
 	
 	public static AdminDTO adminentity2dto(Admin admin)
@@ -346,6 +355,8 @@ public class IAdminServiceImp implements IAdminService {
 		}
 		return credentialListDto;
 	}
+
+	
 
 
 	

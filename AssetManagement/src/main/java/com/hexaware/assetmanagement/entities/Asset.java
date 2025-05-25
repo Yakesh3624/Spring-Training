@@ -14,7 +14,7 @@ public class Asset {
 	@Column(nullable = false,name = "asset_name")
     private String assetName;
 	@Column(nullable = false,name = "category")
-    private String assetCategory;
+    private String category;
 	@Column(nullable = false,name = "model")
     private String assetModel;
 	@Column(nullable = false)
@@ -32,12 +32,12 @@ public class Asset {
 		super();
 	}
 	
-	public Asset(int assetNo, String assetName, String assetCategory, String assetModel, LocalDate manufacturingDate,
+	public Asset(int assetNo, String assetName, String category, String assetModel, LocalDate manufacturingDate,
 			LocalDate expiryDate, double assetValue,String availability) {
 		super();
 		this.assetNo = assetNo;
 		this.assetName = assetName;
-		this.assetCategory = assetCategory;
+		this.category = category;
 		this.assetModel = assetModel;
 		this.manufacturingDate = manufacturingDate;
 		this.expiryDate = expiryDate;
@@ -57,10 +57,10 @@ public class Asset {
 		this.assetName = assetName;
 	}
 	public String getAssetCategory() {
-		return assetCategory;
+		return category;
 	}
 	public void setAssetCategory(String assetCategory) {
-		this.assetCategory = assetCategory;
+		this.category = assetCategory;
 	}
 	public String getAssetModel() {
 		return assetModel;
@@ -94,7 +94,7 @@ public class Asset {
 	}
 	@Override
 	public String toString() {
-		return "Asset [assetNo=" + assetNo + ", assetName=" + assetName + ", assetCategory=" + assetCategory
+		return "Asset [assetNo=" + assetNo + ", assetName=" + assetName + ", assetCategory=" + category
 				+ ", assetModel=" + assetModel + ", manufacturingDate=" + manufacturingDate + ", expiryDate="
 				+ expiryDate + ", assetValue=" + assetValue + ", availability=" + availability + "]";
 	}

@@ -20,7 +20,7 @@ public class ServiceRequest {
 	@Column(nullable = false,name = "issue_type")
     private String issueType;
 	@Column(nullable = false,name = "status")
-    private String requestStatus = "PENDING";
+    private String status = "PENDING";
 	@Column(nullable = false)
     private Timestamp requestedAt = new Timestamp(System.currentTimeMillis());
 	
@@ -29,20 +29,20 @@ public class ServiceRequest {
 	Asset asset;
 	
 	@ManyToOne
-	@JoinColumn(name="userId")
+	@JoinColumn(name="employeeId")
 	Employee employee;
 
 	public ServiceRequest() {
 		super();
 	}
 
-	public ServiceRequest(int requestId, String assetDscription, String issueType, String requestStatus,
+	public ServiceRequest(int requestId, String assetDscription, String issueType, String status,
 			Timestamp requestedAt, Asset asset, Employee employee) {
 		super();
 		this.requestId = requestId;
 		this.assetDscription = assetDscription;
 		this.issueType = issueType;
-		this.requestStatus = requestStatus;
+		this.status = status;
 		this.requestedAt = requestedAt;
 		this.asset = asset;
 		this.employee = employee;
@@ -73,11 +73,11 @@ public class ServiceRequest {
 	}
 
 	public String getRequestStatus() {
-		return requestStatus;
+		return status;
 	}
 
 	public void setRequestStatus(String requestStatus) {
-		this.requestStatus = requestStatus;
+		this.status = requestStatus;
 	}
 
 	public Timestamp getRequestedAt() {
@@ -107,7 +107,7 @@ public class ServiceRequest {
 	@Override
 	public String toString() {
 		return "ServiceRequest [requestId=" + requestId + ", assetDscription=" + assetDscription + ", issueType="
-				+ issueType + ", requestStatus=" + requestStatus + ", requestedAt=" + requestedAt + ", asset=" + asset
+				+ issueType + ", requestStatus=" + status + ", requestedAt=" + requestedAt + ", asset=" + asset
 				+ ", employee=" + employee + "]";
 	}
 	

@@ -3,47 +3,49 @@ package com.hexaware.assetmanagement.services;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.hexaware.assetmanagement.dto.AssetAllocationDTO;
+import com.hexaware.assetmanagement.dto.AssetDTO;
+import com.hexaware.assetmanagement.dto.AssetRequestDTO;
+import com.hexaware.assetmanagement.dto.AuditRequestDTO;
+import com.hexaware.assetmanagement.dto.ServiceRequestDTO;
 import com.hexaware.assetmanagement.entities.Asset;
-import com.hexaware.assetmanagement.entities.AssetAllocation;
-import com.hexaware.assetmanagement.entities.AssetRequest;
-import com.hexaware.assetmanagement.entities.AuditRequest;
 import com.hexaware.assetmanagement.entities.ServiceRequest;
 
 
 public interface IAssetManagementService {
 	
 	
-	Asset addAsset(Asset asset);
-	Asset getAssetByNo(int assetNo);
-	List<Asset> getAllAssets();
-	List<Asset> getAssetsByCategory(String category);
-	Asset updateAsset(Asset asset);
+	AssetDTO addAsset(Asset asset);
+	AssetDTO getAssetByNo(int assetNo);
+	List<AssetDTO> getAllAssets();
+	List<AssetDTO> getAssetsByCategory(String category);
+	AssetDTO updateAsset(Asset asset);
 	String deleteAsset(int assetNo);
 	
-	AssetAllocation allocateAssetToUser(int employeeId, int assetNo, LocalDate returnDate);
-	AssetAllocation getAllocationById(int allocationId);
-	List<AssetAllocation> getAllAllocations();
-	List<AssetAllocation> getAllocationsByUserId(int employeeId);
-	String returnAsset(int allocationId);
+	AssetAllocationDTO allocateAssetToEmployee(int employeeId, int assetNo, LocalDate returnDate);
+	AssetAllocationDTO getAllocationById(int allocationId);
+	List<AssetAllocationDTO> getAllAllocations();
+	List<AssetAllocationDTO> getAllocationsByEmployeeId(int employeeId);
+	int returnAsset(int allocationId);
 	
-	ServiceRequest addServiceRequest(ServiceRequest request);
-	ServiceRequest updateServiceRequestStatus(int requestId, String status);
-	List<ServiceRequest> getAllRequests();
-	List<ServiceRequest> getAllRequestsByEmployeeId(int employeeId);
-	List<ServiceRequest> getAllRequestsByStatus(String status);
-	List<ServiceRequest> getAllRequestsByIssueType(String issueType);
+	ServiceRequestDTO addServiceRequest(ServiceRequest request);
+	int updateServiceRequestStatus(int requestId, String status);
+	List<ServiceRequestDTO> getAllRequests();
+	List<ServiceRequestDTO> getAllRequestsByEmployeeId(int employeeId);
+	List<ServiceRequestDTO> getAllRequestsByStatus(String status);
+	List<ServiceRequestDTO> getAllRequestsByIssueType(String issueType);
 	
-	AuditRequest addAuditRequest(int employeeId, int assetNo);
-	List<AuditRequest> getAuditRequestsByEmployeeId(int employeeId);
-	List<AuditRequest> getAuditRequestsByRequestId(int requestId);
-	List<AuditRequest> getAuditRequestsByStatus(String status);
-	List<AuditRequest> getAllAuditRequests();
-	AuditRequest updateAuditRequestStatus(int auditNo, String status);
+	AuditRequestDTO addAuditRequest(int employeeId, int assetNo);
+	List<AuditRequestDTO> getAuditRequestsByEmployeeId(int employeeId);
+	List<AuditRequestDTO> getAuditRequestsByRequestId(int requestId);
+	List<AuditRequestDTO> getAuditRequestsByStatus(String status);
+	List<AuditRequestDTO> getAllAuditRequests();
+	int updateAuditRequestStatus(int auditNo, String status);
 	
-	AssetRequest addAssetRequest(int employeeId, int assetNo);
-	List<AssetRequest> getAssetRequestsByEmployeeId(int employeeId);
-	List<AssetRequest> getAssetRequestsByRequestId(int requestId);
-	List<AssetRequest> getAssetRequestsByStatus(String status);
-	List<AssetRequest> getAllAssetRequests();
-	AssetRequest updateAssetRequestStatus(int auditNo, String status);
+	int addAssetRequest(int employeeId, int assetNo);
+	List<AssetRequestDTO> getAssetRequestsByEmployeeId(int employeeId);
+	List<AssetRequestDTO> getAssetRequestsByRequestId(int requestId);
+	List<AssetRequestDTO> getAssetRequestsByStatus(String status);
+	List<AssetRequestDTO> getAllAssetRequests();
+	int updateAssetRequestStatus(int auditNo, String status);
 }

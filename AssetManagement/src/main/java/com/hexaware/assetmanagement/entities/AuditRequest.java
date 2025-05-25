@@ -14,12 +14,12 @@ import jakarta.persistence.Table;
 public class AuditRequest {
 	
 	@Id
-	private int auditId;
+	private int requestId;
 	
 	@Column(nullable = false,name = "requestedAt")
     private Timestamp requestedAt = new Timestamp(System.currentTimeMillis());
 	@Column(nullable = false,name = "status")
-    private String requestStatus = "PENDING";
+    private String status = "PENDING";
 	
 	@ManyToOne
 	@JoinColumn(name="assetNo")
@@ -33,21 +33,21 @@ public class AuditRequest {
 		super();
 	}
 
-	public AuditRequest(int auditId, Timestamp requestedAt, String requestStatus, Asset asset, Employee employee) {
+	public AuditRequest(int auditId, Timestamp requestedAt, String status, Asset asset, Employee employee) {
 		super();
-		this.auditId = auditId;
+		this.requestId = auditId;
 		this.requestedAt = requestedAt;
-		this.requestStatus = requestStatus;
+		this.status = status;
 		this.asset = asset;
 		this.employee = employee;
 	}
 
 	public int getAuditId() {
-		return auditId;
+		return requestId;
 	}
 
 	public void setAuditId(int auditId) {
-		this.auditId = auditId;
+		this.requestId = auditId;
 	}
 
 	public Timestamp getRequestedAt() {
@@ -59,11 +59,11 @@ public class AuditRequest {
 	}
 
 	public String getRequestStatus() {
-		return requestStatus;
+		return status;
 	}
 
-	public void setRequestStatus(String requestStatus) {
-		this.requestStatus = requestStatus;
+	public void setRequestStatus(String status) {
+		this.status = status;
 	}
 
 	public Asset getAsset() {
@@ -81,6 +81,14 @@ public class AuditRequest {
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
+
+	@Override
+	public String toString() {
+		return "AuditRequest [auditId=" + requestId + ", requestedAt=" + requestedAt + ", status=" + status + ", asset="
+				+ asset + ", employee=" + employee + "]";
+	}
+	
+	
 
 	
     

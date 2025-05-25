@@ -1,10 +1,10 @@
-package com.hexaware.AdminMicrocontroller.service;
+package com.hexaware.AdminMicrocontroller.restcontroller;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class IAdminServiceImpTest {
+class AdminRestControllerTest {
 
 	@Test
 	void testAddAdmin() {
@@ -28,41 +28,6 @@ class IAdminServiceImpTest {
 
 	@Test
 	void testGetAllAdmins() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testAddCredential() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testUpdatePassword() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testDeleteCredential() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetCredentialByAdminId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetCredentialByUserName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetAllCredentials() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testAuthenticate() {
 		fail("Not yet implemented");
 	}
 
@@ -117,11 +82,6 @@ class IAdminServiceImpTest {
 	}
 
 	@Test
-	void testGrantAsset() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testReturnAsset() {
 		fail("Not yet implemented");
 	}
@@ -147,6 +107,11 @@ class IAdminServiceImpTest {
 	}
 
 	@Test
+	void testGetAllRequestsByRequestId() {
+		fail("Not yet implemented");
+	}
+
+	@Test
 	void testGetAllRequestsByStatus() {
 		fail("Not yet implemented");
 	}
@@ -158,6 +123,16 @@ class IAdminServiceImpTest {
 
 	@Test
 	void testAddAuditRequest() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAuditRequestsByEmployeeId() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAuditRequestsByRequestId() {
 		fail("Not yet implemented");
 	}
 
@@ -177,27 +152,7 @@ class IAdminServiceImpTest {
 	}
 
 	@Test
-	void testGetAuditRequestsByEmployeeId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetAuditRequestsByRequestId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	void testAddAssetRequest() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetAssetRequestsByEmployeeId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetAssetRequestsByRequestId() {
 		fail("Not yet implemented");
 	}
 
@@ -217,22 +172,17 @@ class IAdminServiceImpTest {
 	}
 
 	@Test
-	void testAdminentity2dto() {
+	void testGetAssetRequestsByEmployeeId() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testAdminentity2dtolist() {
+	void testGetAssetRequestsByRequestId() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testCredential2dto() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testCredential2dtolist() {
+	void testGrantAsset() {
 		fail("Not yet implemented");
 	}
 

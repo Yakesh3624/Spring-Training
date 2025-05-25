@@ -19,7 +19,7 @@ public class AssetRequest {
 	@Column(nullable = false,name = "requestedAt")
     private Timestamp requestedAt = new Timestamp(System.currentTimeMillis());
 	@Column(nullable = false,name = "status")
-    private String requestStatus = "PENDING";
+    private String status = "PENDING";
 	
 	@ManyToOne
 	@JoinColumn(name="assetNo")
@@ -33,11 +33,11 @@ public class AssetRequest {
 		super();
 	}
 
-	public AssetRequest(int requestId, Timestamp requestedAt, String requestStatus, Asset asset, Employee employee) {
+	public AssetRequest(int requestId, Timestamp requestedAt, String status, Asset asset, Employee employee) {
 		super();
 		this.requestId = requestId;
 		this.requestedAt = requestedAt;
-		this.requestStatus = requestStatus;
+		this.status = status;
 		this.asset = asset;
 		this.employee = employee;
 	}
@@ -59,11 +59,11 @@ public class AssetRequest {
 	}
 
 	public String getRequestStatus() {
-		return requestStatus;
+		return status;
 	}
 
-	public void setRequestStatus(String requestStatus) {
-		this.requestStatus = requestStatus;
+	public void setRequestStatus(String status) {
+		this.status = status;
 	}
 
 	public Asset getAsset() {
@@ -84,8 +84,8 @@ public class AssetRequest {
 
 	@Override
 	public String toString() {
-		return "AssetRequest [requestId=" + requestId + ", requestedAt=" + requestedAt + ", requestStatus="
-				+ requestStatus + ", asset=" + asset + ", employee=" + employee + "]";
+		return "AssetRequest [requestId=" + requestId + ", requestedAt=" + requestedAt + ", status="
+				+ status + ", asset=" + asset + ", employee=" + employee + "]";
 	}
 	
 	

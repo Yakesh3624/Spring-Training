@@ -62,6 +62,7 @@ public interface IAdminService {
 	List<AssetRequestDTO> getAllAssetRequests();
 	AssetRequestDTO updateAssetRequestStatus(int auditNo, String status);
 	List<AssetRequestDTO> getAssetRequestsByEmployeeId(int employeeId);
+	List<AssetRequestDTO> getAssetRequestsByRequestId(int requestId);
 	AssetAllocationDTO grantAsset(int userId, int assetNo, LocalDate returnDate);
 	
 	
