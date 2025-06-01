@@ -7,53 +7,52 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hexaware.assetmanagement.dto.AuditRequestDTO;
+import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
+import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
 @RestController
 @RequestMapping("/api/audit-request")
 public class AuditRequestRestController {
-	
+
 	@Autowired
 	IAssetManagementService service;
-	
-	@PostMapping("/add/{employeeId}/{assetNo}")
-	AuditRequestDTO addAuditRequest(@PathVariable int employeeId,@PathVariable int assetNo)
-	{
-		return service.addAuditRequest(employeeId, assetNo);
+
+	@PostMapping("/add")
+	public AuditRequestDTO addAuditRequest(@RequestBody AuditRequestDTO auditRequestDto)
+			throws DataAlreadyExistException {
+		return service.addAuditRequest(auditRequestDto);
 	}
-	
-	@GetMapping("/get-by-empolyeeid/{employeeId}")
-	List<AuditRequestDTO> getAuditRequestsByEmployeeId(@PathVariable int employeeId)
-	{
-		return service.getAuditRequestsByEmployeeId(employeeId);
-	}
-	
-	@GetMapping("/get-by-requestid/{requestId}")
-	List<AuditRequestDTO> getAuditRequestsByRequestId(@PathVariable int requestId)
-	{
-		return service.getAuditRequestsByRequestId(requestId);
-	}
-	
-	@GetMapping("/get-by-status/{status}")
-	List<AuditRequestDTO> getAuditRequestsByStatus(@PathVariable String status)
-	{
-		return service.getAuditRequestsByStatus(status);
-	}
-	
+
 	@GetMapping("/getall")
-	List<AuditRequestDTO> getAllAuditRequests()
-	{
+	public List<AuditRequestDTO> getAllAuditRequests() throws DataNotFoundException {
 		return service.getAllAuditRequests();
 	}
-	
-	@PutMapping("/update-status/{auditId}/{status}")
-	int updateAuditRequestStatus(int auditId, String status)
-	{
-		return service.updateAuditRequestStatus(auditId, status);
+
+	@GetMapping("/get/usersId/{usersId}")
+	public List<AuditRequestDTO> getAuditRequestsByUsersId(@PathVariable Long usersId) throws DataNotFoundException {
+		return service.getAuditRequestsByUsersId(usersId);
+	}
+
+	@GetMapping("/get/status/{status}")
+	public List<AuditRequestDTO> getAuditRequestsByStatus(@PathVariable String status) throws DataNotFoundException {
+		return service.getAuditRequestsByStatus(status);
+	}
+
+	@GetMapping("/get/requestId/{requestId}")
+	public AuditRequestDTO getAuditRequestsByRequestId(@PathVariable Long requestId) throws DataNotFoundException {
+		return service.getAuditRequestsByRequestId(requestId);
+	}
+
+	@PutMapping("/update/status/{requestId}/{status}")
+	public AuditRequestDTO updateAuditRequestStatus(@PathVariable Long requestId, @PathVariable String status)
+			throws DataNotFoundException {
+		return service.updateAuditRequestStatus(requestId, status);
 	}
 
 }

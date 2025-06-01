@@ -12,56 +12,58 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hexaware.assetmanagement.dto.ServiceRequestDTO;
-import com.hexaware.assetmanagement.entities.ServiceRequest;
+import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
+import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
 @RestController
 @RequestMapping("/api/service-request")
 public class ServiceRequestRestController {
-	
+
 	@Autowired
 	IAssetManagementService service;
-	
+
 	@PostMapping("/add")
-	ServiceRequestDTO addServiceRequest(@RequestBody ServiceRequest request)
-	{
-		return service.addServiceRequest(request);
+	ServiceRequestDTO addServiceRequest(@RequestBody ServiceRequestDTO serviceRequestDto)
+			throws DataNotFoundException, DataAlreadyExistException {
+		return service.addServiceRequest(serviceRequestDto);
+
 	}
-	
-	@PutMapping("/update/{requestId}/{status}")
-	int updateServiceRequestStatus(@PathVariable int requestId,@PathVariable String status)
-	{
+
+	@PutMapping("/update/status/{requestId}/{status}")
+	ServiceRequestDTO updateServiceRequestStatus(@PathVariable Long requestId, @PathVariable String status)
+			throws DataNotFoundException {
 		return service.updateServiceRequestStatus(requestId, status);
 	}
-	
+
 	@GetMapping("/getall")
-	List<ServiceRequestDTO> getAllRequests()
-	{
-		return service.getAllRequests();
+	List<ServiceRequestDTO> getAllServiceRequests() throws DataNotFoundException {
+		return service.getAllServiceRequests();
+
 	}
-	
-	@GetMapping("/get-by-requestid/{requestId}")
-	List<ServiceRequestDTO> getAllRequestsByRequestId(@PathVariable int requestId)
+
+	@GetMapping("/get/usersId/{usersId}")
+	List<ServiceRequestDTO> getAllServiceRequestsByUsersId(@PathVariable Long usersId) throws DataNotFoundException
 	{
-		return service.getAllRequestsByEmployeeId(requestId);
+		return service.getAllServiceRequestsByUsersId(usersId);
 	}
-	
-	@GetMapping("/get-by-employeeid/{employeeId}")
-	List<ServiceRequestDTO> getAllRequestsByEmployeeId(@PathVariable int employeeId)
+
+	@GetMapping("/get/requestId/{requestId}")
+	ServiceRequestDTO getServiceRequestsByRequestId(@PathVariable Long requestId) throws DataNotFoundException
 	{
-		return service.getAllRequestsByEmployeeId(employeeId);
+		return service.getServiceRequestsByRequestId(requestId);
 	}
-	
-	@GetMapping("/get-by-status/{status}")
-	List<ServiceRequestDTO> getAllRequestsByStatus(@PathVariable String status)
+
+	@GetMapping("/get/status/{status}")
+	List<ServiceRequestDTO> getAllServiceRequestsByStatus(@PathVariable String status) throws DataNotFoundException
 	{
-		return service.getAllRequestsByStatus(status);
+		return service.getAllServiceRequestsByStatus(status);
 	}
-	
-	@GetMapping("/get-by-issuetype/{issueType}")
-	List<ServiceRequestDTO> getAllRequestsByIssueType(@PathVariable String issueType)
+
+	@GetMapping("/get/issue-type/{issueType}")
+	List<ServiceRequestDTO> getAllServiceRequestsByIssueType(@PathVariable String issueType) throws DataNotFoundException
 	{
-		return service.getAllRequestsByIssueType(issueType);
+		return service.getAllServiceRequestsByIssueType(issueType);
 	}
 
 }

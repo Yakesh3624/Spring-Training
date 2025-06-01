@@ -4,92 +4,48 @@ import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Pattern.Flag;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Table(name="audit_request")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = { "asset", "user" })
+@Table(name = "audit_request")
 public class AuditRequest {
-	
+
 	@Id
-	private int requestId;
-	
-	@Column(nullable = false,name = "requestedAt")
-    private Timestamp requestedAt = new Timestamp(System.currentTimeMillis());
-	@Column(nullable = false,name = "status")
-    private String status = "PENDING";
-	
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long requestId;
+
+	@NotNull(message = "Request timestamp is required")
+	@Column(nullable = false, name = "requested_at")
+	private Timestamp requestedAt = new Timestamp(System.currentTimeMillis());
+
+	@NotNull(message = "Status is required")
+	@Pattern(regexp = "Pending|Approved|Rejected", flags = Flag.CASE_INSENSITIVE, message = "Status must be one of: PENDING, APPROVED, REJECTED")
+	@Column(nullable = false)
+	private String status = "Pending";
+
 	@ManyToOne
-	@JoinColumn(name="assetNo")
-	Asset asset;
-	
+	@JoinColumn(name = "asset_no")
+	private Asset asset;
+
 	@ManyToOne
-	@JoinColumn(name="userId")
-	Employee employee;
-
-	public AuditRequest() {
-		super();
-	}
-
-	public AuditRequest(int auditId, Timestamp requestedAt, String status, Asset asset, Employee employee) {
-		super();
-		this.requestId = auditId;
-		this.requestedAt = requestedAt;
-		this.status = status;
-		this.asset = asset;
-		this.employee = employee;
-	}
-
-	public int getAuditId() {
-		return requestId;
-	}
-
-	public void setAuditId(int auditId) {
-		this.requestId = auditId;
-	}
-
-	public Timestamp getRequestedAt() {
-		return requestedAt;
-	}
-
-	public void setRequestedAt(Timestamp requestedAt) {
-		this.requestedAt = requestedAt;
-	}
-
-	public String getRequestStatus() {
-		return status;
-	}
-
-	public void setRequestStatus(String status) {
-		this.status = status;
-	}
-
-	public Asset getAsset() {
-		return asset;
-	}
-
-	public void setAsset(Asset asset) {
-		this.asset = asset;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
-
-	@Override
-	public String toString() {
-		return "AuditRequest [auditId=" + requestId + ", requestedAt=" + requestedAt + ", status=" + status + ", asset="
-				+ asset + ", employee=" + employee + "]";
-	}
-	
-	
-
-	
-    
+	@JoinColumn(name = "users_id")
+	private Users user;
 }

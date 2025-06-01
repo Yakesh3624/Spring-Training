@@ -4,107 +4,64 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Pattern.Flag;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Asset {
-	
+
 	@Id
-	private int assetNo;
-	@Column(nullable = false,name = "asset_name")
-    private String assetName;
-	@Column(nullable = false,name = "category")
-    private String category;
-	@Column(nullable = false,name = "model")
-    private String assetModel;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "asset_no")
+	private Long assetNo;
+
+	@NotBlank(message = "Asset name is required")
+	@Size(min = 2, max = 50, message = "Asset name must be between 2 and 50 characters")
 	@Column(nullable = false)
-    private LocalDate manufacturingDate;
+	private String assetName;
+
+	@Pattern(regexp = "Laptop|Furniture|Car|Gadgets", flags = Flag.CASE_INSENSITIVE, message = "Category must be one of: Laptop, Furniture, Car, Gadgets")
 	@Column(nullable = false)
-    private LocalDate expiryDate;
+	private String category;
+
+	@Size(min = 1, max = 30, message = "Model must be between 1 and 30 characters")
+	@Column(nullable = true, name = "model")
+	private String assetModel;
+
+	@NotNull(message = "Manufacturing date is required")
+	@PastOrPresent(message = "Manufacturing date cannot be in the future")
 	@Column(nullable = false)
-    private double assetValue;
+	private LocalDate manufacturingDate;
+
+	@Future(message = "Expiry date must be in the future")
+	@Column(nullable = true)
+	private LocalDate expiryDate;
+
+	@DecimalMin(value = "0.0", inclusive = false, message = "Asset value must be greater than 0")
 	@Column(nullable = false)
-    private String availability="available";
-	
-	
-	
-	public Asset() {
-		super();
-	}
-	
-	public Asset(int assetNo, String assetName, String category, String assetModel, LocalDate manufacturingDate,
-			LocalDate expiryDate, double assetValue,String availability) {
-		super();
-		this.assetNo = assetNo;
-		this.assetName = assetName;
-		this.category = category;
-		this.assetModel = assetModel;
-		this.manufacturingDate = manufacturingDate;
-		this.expiryDate = expiryDate;
-		this.assetValue = assetValue;
-		this.availability = availability;
-	}
-	public int getAssetNo() {
-		return assetNo;
-	}
-	public void setAssetNo(int assetNo) {
-		this.assetNo = assetNo;
-	}
-	public String getAssetName() {
-		return assetName;
-	}
-	public void setAssetName(String assetName) {
-		this.assetName = assetName;
-	}
-	public String getAssetCategory() {
-		return category;
-	}
-	public void setAssetCategory(String assetCategory) {
-		this.category = assetCategory;
-	}
-	public String getAssetModel() {
-		return assetModel;
-	}
-	public void setAssetModel(String assetModel) {
-		this.assetModel = assetModel;
-	}
-	public LocalDate getManufacturingDate() {
-		return manufacturingDate;
-	}
-	public void setManufacturingDate(LocalDate manufacturingDate) {
-		this.manufacturingDate = manufacturingDate;
-	}
-	public LocalDate getExpiryDate() {
-		return expiryDate;
-	}
-	public void setExpiryDate(LocalDate expiryDate) {
-		this.expiryDate = expiryDate;
-	}
-	public double getAssetValue() {
-		return assetValue;
-	}
-	public void setAssetValue(double assetValue) {
-		this.assetValue = assetValue;
-	}
-	public String getAvailability() {
-		return availability;
-	}
-	public void setAvailability(String availability) {
-		this.availability = availability;
-	}
-	@Override
-	public String toString() {
-		return "Asset [assetNo=" + assetNo + ", assetName=" + assetName + ", assetCategory=" + category
-				+ ", assetModel=" + assetModel + ", manufacturingDate=" + manufacturingDate + ", expiryDate="
-				+ expiryDate + ", assetValue=" + assetValue + ", availability=" + availability + "]";
-	}
-	
-	
-	
-	
-	
-	
-    
-    
-	
+	private Double assetValue;
+
+	@NotNull(message = "Availability should not be null")
+	@Pattern(regexp = "available|unavailable", message = "Availability must be either 'available' or 'unavailable'")
+	private String availability;
+
 }

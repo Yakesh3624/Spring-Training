@@ -4,93 +4,48 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Table(name="asset_allocation")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = { "asset", "user" })
+@Table(name = "asset_allocation")
 public class AssetAllocation {
-	
-	@Id()
-	private int allocationId;
-	@Column(nullable = false,name = "allocation_date")
-    private LocalDate allocationDate = LocalDate.now();
-	@Column(nullable = false,name = "retun_date")
-    private LocalDate returnDate;
-	
-	@ManyToOne
-	@JoinColumn(name="assetNo")
-	Asset asset;
-	
-	@ManyToOne
-	@JoinColumn(name="userID")
-	Employee employee;
 
-	
-	
-	public AssetAllocation() {
-		super();
-	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long allocationId;
 
-	public AssetAllocation(int allocationId, LocalDate allocationDate, LocalDate returnDate, Asset asset, Employee employee) {
-		super();
-		this.allocationId = allocationId;
-		this.allocationDate = allocationDate;
-		this.returnDate = returnDate;
-		this.asset = asset;
-		this.employee = employee;
-	}
+	@NotNull(message = "Allocation date is required")
+	@Column(nullable = false, name = "allocation_date")
+	private LocalDate allocationDate = LocalDate.now();
 
-	public int getAllocationId() {
-		return allocationId;
-	}
+	@NotNull(message = "Return date is required")
+	@Future(message = "Return date must be a future date")
+	@Column(nullable = false, name = "return_date")
+	private LocalDate returnDate;
 
-	public void setAllocationId(int allocationId) {
-		this.allocationId = allocationId;
-	}
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "asset_no")
+	private Asset asset;
 
-	public LocalDate getAllocationDate() {
-		return allocationDate;
-	}
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "users_id")
+	private Users user;
 
-	public void setAllocationDate(LocalDate allocationDate) {
-		this.allocationDate = allocationDate;
-	}
-
-	public LocalDate getReturnDate() {
-		return returnDate;
-	}
-
-	public void setReturnDate(LocalDate returnDate) {
-		this.returnDate = returnDate;
-	}
-
-	public Asset getAsset() {
-		return asset;
-	}
-
-	public void setAsset(Asset asset) {
-		this.asset = asset;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
-
-	@Override
-	public String toString() {
-		return "AssetAllocation [allocationId=" + allocationId + ", allocationDate=" + allocationDate + ", returnDate="
-				+ returnDate + ", asset=" + asset + "]";
-	}
-
-	
-	
-	
-    
 }

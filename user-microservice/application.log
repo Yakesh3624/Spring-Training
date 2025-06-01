@@ -1,0 +1,61 @@
+2025-06-02T00:37:39.367+05:30  INFO 26972 --- [user-microservice] [main] c.h.u.UserMicroserviceApplication        : Starting UserMicroserviceApplication using Java 21.0.6 with PID 26972 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\user-microservice\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\user-microservice)
+2025-06-02T00:37:39.370+05:30 DEBUG 26972 --- [user-microservice] [main] c.h.u.UserMicroserviceApplication        : Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-06-02T00:37:39.370+05:30  INFO 26972 --- [user-microservice] [main] c.h.u.UserMicroserviceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T00:37:40.188+05:30  INFO 26972 --- [user-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T00:37:40.267+05:30  INFO 26972 --- [user-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-06-02T00:37:40.831+05:30  INFO 26972 --- [user-microservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-02T00:37:40.844+05:30  INFO 26972 --- [user-microservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T00:37:40.844+05:30  INFO 26972 --- [user-microservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-02T00:37:40.898+05:30  INFO 26972 --- [user-microservice] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T00:37:40.899+05:30  INFO 26972 --- [user-microservice] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1484 ms
+2025-06-02T00:37:41.016+05:30  INFO 26972 --- [user-microservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T00:37:41.079+05:30  INFO 26972 --- [user-microservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-02T00:37:41.106+05:30  INFO 26972 --- [user-microservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T00:37:41.379+05:30  INFO 26972 --- [user-microservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T00:37:41.408+05:30  INFO 26972 --- [user-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T00:37:41.759+05:30  INFO 26972 --- [user-microservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c3679e5
+2025-06-02T00:37:41.761+05:30  INFO 26972 --- [user-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T00:37:41.815+05:30  WARN 26972 --- [user-microservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T00:37:41.830+05:30  INFO 26972 --- [user-microservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T00:37:42.702+05:30  INFO 26972 --- [user-microservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T00:37:43.423+05:30  INFO 26972 --- [user-microservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T00:37:43.739+05:30 DEBUG 26972 --- [user-microservice] [main] c.h.u.filter.JwtAuthFilter               : Filter 'jwtAuthFilter' configured for use
+2025-06-02T00:37:43.835+05:30  INFO 26972 --- [user-microservice] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-06-02T00:37:43.836+05:30  WARN 26972 --- [user-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-06-02T00:37:44.018+05:30  WARN 26972 --- [user-microservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T00:37:44.358+05:30  WARN 26972 --- [user-microservice] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [api/users/**, api/users/asset/**, api/users/asset-request/**, api/users/asset-allocation/**, api/users/audit-request/**, api/users/service-request/**, api/credential/] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-06-02T00:37:44.824+05:30  INFO 26972 --- [user-microservice] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-02T00:37:44.836+05:30  INFO 26972 --- [user-microservice] [main] c.h.u.UserMicroserviceApplication        : Started UserMicroserviceApplication in 5.912 seconds (process running for 6.494)
+2025-06-02T00:40:05.925+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T00:40:05.926+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T00:40:05.926+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-06-02T00:40:06.577+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 377 ms
+2025-06-02T00:41:01.967+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-4] c.h.u.service.UsersServiceImp            : Attempting to add user with ID: null
+2025-06-02T00:41:02.057+05:30  WARN 26972 --- [user-microservice] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1364, SQLState: HY000
+2025-06-02T00:41:02.057+05:30 ERROR 26972 --- [user-microservice] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Field 'phone' doesn't have a default value
+2025-06-02T00:41:34.172+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-8] c.h.u.service.UsersServiceImp            : Attempting to add user with ID: null
+2025-06-02T00:41:34.197+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-8] c.h.u.service.UsersServiceImp            : User added successfully with ID: 2
+2025-06-02T00:41:34.370+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-7] c.h.u.service.UsersServiceImp            : Attempting to add user with ID: null
+2025-06-02T00:41:34.378+05:30  WARN 26972 --- [user-microservice] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2025-06-02T00:41:34.380+05:30 ERROR 26972 --- [user-microservice] [http-nio-8080-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '9092210166' for key 'users.UKn14mnjfh0j5psw8omlegp1d68'
+2025-06-02T00:42:44.386+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-10] c.h.u.service.UsersServiceImp            : Attempting to add credential with ID: 2
+2025-06-02T00:42:44.928+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-10] c.h.u.service.UsersServiceImp            : Credential added successfully with ID: 2
+2025-06-02T00:44:01.405+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-2] c.h.u.service.UsersServiceImp            : Fetch all users
+2025-06-02T00:44:01.405+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-2] c.h.u.service.UsersServiceImp            : Fetched all users
+2025-06-02T00:44:43.940+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-5] c.h.u.service.UsersServiceImp            : Attempting to add user with ID: null
+2025-06-02T00:44:43.951+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-5] c.h.u.service.UsersServiceImp            : User added successfully with ID: 4
+2025-06-02T00:45:01.442+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-3] c.h.u.service.UsersServiceImp            : Attempting to add credential with ID: 4
+2025-06-02T00:45:01.557+05:30  INFO 26972 --- [user-microservice] [http-nio-8080-exec-3] c.h.u.service.UsersServiceImp            : Credential added successfully with ID: 4
+2025-06-02T00:45:22.571+05:30  INFO 26972 --- [user-microservice] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T00:45:22.571+05:30  INFO 26972 --- [user-microservice] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T00:45:22.587+05:30  INFO 26972 --- [user-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T00:45:22.588+05:30  INFO 26972 --- [user-microservice] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T00:45:22.588+05:30  INFO 26972 --- [user-microservice] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T00:45:22.604+05:30  INFO 26972 --- [user-microservice] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
