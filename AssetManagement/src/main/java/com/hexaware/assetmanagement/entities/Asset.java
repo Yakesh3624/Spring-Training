@@ -21,6 +21,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing an asset in the Asset Management System.
+ * 
+ * Maps to the 'assets' table in the database and contains fields such as
+ * asset number, name, category, availability status, and purchase details.
+ * 
+ * This class is used for ORM (Object Relational Mapping) with JPA/Hibernate.
+ * 
+ * An asset can be allocated, serviced, or audited based on business requirements.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Entity
 @Setter
 @Getter

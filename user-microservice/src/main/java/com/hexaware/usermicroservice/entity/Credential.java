@@ -15,6 +15,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing login credentials of a user in the Asset Management System.
+ * 
+ * Maps to the 'credentials' table and contains fields such as username, password,
+ * role, and references to the associated user.
+ * 
+ * This entity is used during authentication to validate users and assign appropriate access roles.
+ * 
+ * Passwords should be stored in a hashed and encrypted format for security.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @Entity
 @Getter
 @Setter

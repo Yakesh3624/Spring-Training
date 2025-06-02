@@ -16,6 +16,22 @@ import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
+/**
+ * REST controller for performing CRUD operations on assets within the Asset Management System.
+ * 
+ * Provides endpoints to add, update, delete, and fetch assets based on different filters
+ * such as category, availability, and asset number.
+ * 
+ * Enables admins to manage the asset catalog and keep it up to date.
+ * 
+ * Common endpoints include: /add, /update, /delete, /getAll, /getByAssetNo, /getByCategory.
+ * 
+ * All endpoints are secured using JWT and role-based access control to ensure only authorized users can modify asset data.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/asset")
 public class AssetRestController {

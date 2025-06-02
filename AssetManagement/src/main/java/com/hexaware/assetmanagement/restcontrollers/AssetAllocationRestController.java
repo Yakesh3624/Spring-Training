@@ -15,6 +15,25 @@ import com.hexaware.assetmanagement.dto.AssetAllocationDTO;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
+/**
+ * REST controller for managing asset allocation operations in the Asset Management System.
+ * 
+ * Handles requests to allocate assets to employees, return allocated assets,
+ * and view current allocation records.
+ * 
+ * Enables admins to assign available assets and track allocation history.
+ * 
+ * Endpoints typically include: /allocateAssetToUser, /return, /getByUser, /getAll, etc.
+ * 
+ * All operations are secured using JWT-based authentication and role-based authorization.
+ * 
+ * Ensures that asset usage is properly tracked and optimized across the organization.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @RestController
 @RequestMapping("/api/asset-allocation")
 public class AssetAllocationRestController {

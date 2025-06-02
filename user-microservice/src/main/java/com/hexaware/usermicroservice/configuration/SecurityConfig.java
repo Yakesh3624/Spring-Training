@@ -41,7 +41,7 @@ public class SecurityConfig {
 				.permitAll().and().authorizeHttpRequests()
 				.requestMatchers("api/users/**", "api/users/asset/**", "api/users/asset-request/**",
 						"api/users/asset-allocation/**", "api/users/audit-request/**", "api/users/service-request/**",
-						"api/credential/")
+						"api/credential/**")
 				.authenticated().and() // .formLogin().and().build();
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authenticationProvider(authenticationProvider())

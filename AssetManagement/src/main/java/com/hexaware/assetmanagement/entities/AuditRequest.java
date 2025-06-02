@@ -19,6 +19,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing a request to audit an asset.
+ * 
+ * Maps to the 'audit_request' table and includes audit request ID, associated user,
+ * asset details, date of request, and current status.
+ * 
+ * This entity is used to log and manage audit tracking for assets within the system.
+ * 
+ * Audits help ensure asset compliance and proper usage.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Entity
 @Setter
 @Getter

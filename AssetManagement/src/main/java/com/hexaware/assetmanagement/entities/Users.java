@@ -17,6 +17,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing a user in the Asset Management System.
+ * 
+ * Maps to the 'users' table and contains user information such as name, email,
+ * phone number, and role (e.g., EMPLOYEE, ADMIN).
+ * 
+ * This entity is used for user identification, authentication, and authorization.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Entity
 @Getter
 @Setter
@@ -55,7 +67,7 @@ public class Users {
 
 	@NotBlank(message = "Contact number is required")
 	@Pattern(regexp = "^\\d{10}$", message = "Contact number must be 10 digits")
-	@Column(nullable = false, unique = true, name = "phone")
+	@Column(nullable = false, unique = true)
 	private String contactNumber;
 
 	@NotBlank(message = "Address is required")

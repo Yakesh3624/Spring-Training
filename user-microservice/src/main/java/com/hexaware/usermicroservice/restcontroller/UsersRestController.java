@@ -29,6 +29,19 @@ import com.hexaware.usermicroservice.service.IUsersService;
 
 import jakarta.validation.Valid;
 
+/**
+ * REST controller for managing user-related operations in the Asset Management System.
+ * 
+ * Provides endpoints for user registration, login, retrieval, and role-based access control.
+ * 
+ * Secured using JWT authentication to ensure authorized access to protected resources.
+ * 
+ * Endpoints typically include: /register, /login, /getAll, /getByUsersId, etc.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/users")
 public class UsersRestController {
@@ -284,7 +297,7 @@ public class UsersRestController {
 	@PreAuthorize("hasAnyAuthority('ADMIN')")
 	AssetRequestDTO updateAssetRequestStatus(@PathVariable Long requestId, @PathVariable String status)
 			throws DataNotFoundException {
-		restTemplate.put("http://localhost:8081/api/asset-request/update/" + requestId + "/" + status, requestId);
+		restTemplate.put("http://localhost:8081/api/asset-request/update/status/" + requestId + "/" + status, requestId);
 
 		return restTemplate.getForObject("http://localhost:8081/api/asset-request/get/requestId/" + requestId,
 				AssetRequestDTO.class);

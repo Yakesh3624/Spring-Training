@@ -17,6 +17,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing a user in the Asset Management System.
+ * 
+ * Maps to the 'users' table in the database and stores user profile information
+ * such as name, email, phone number, designation, and department.
+ * 
+ * A user can perform operations like raising asset requests, audits, or service requests.
+ * The associated credentials (username and password) are managed in a separate entity.
+ * 
+ * Used for role-based access control in the system (e.g., EMPLOYEE, ADMIN).
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @Entity
 @Getter
 @Setter

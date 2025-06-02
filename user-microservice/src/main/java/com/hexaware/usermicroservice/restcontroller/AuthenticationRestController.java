@@ -20,6 +20,22 @@ import com.hexaware.usermicroservice.service.JwtService;
 
 import jakarta.validation.Valid;
 
+/**
+ * REST controller responsible for handling authentication operations such as login and token generation.
+ * 
+ * Provides endpoints for user login and JWT token issuance upon successful authentication.
+ * 
+ * Works closely with Spring Security and the authentication service to validate user credentials.
+ * 
+ * Common endpoints include: /login, /generate-token, /refresh-token.
+ * 
+ * Ensures secure access to protected APIs using JWT-based authentication.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @RestController
 @RequestMapping("/api/authenticate")
 public class AuthenticationRestController {

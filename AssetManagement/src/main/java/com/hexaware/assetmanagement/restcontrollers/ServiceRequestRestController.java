@@ -16,6 +16,23 @@ import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
+/**
+ * REST controller for handling service/maintenance requests for assets.
+ * 
+ * Users can raise issues related to damaged or malfunctioning assets.
+ * 
+ * Admins can update or resolve service requests accordingly.
+ * 
+ * Endpoints include: /add, /getByAsset, /getAll, /updateStatus, etc.
+ * 
+ * Ensures timely servicing of organizational assets to maintain productivity.
+ * 
+ * All endpoints are secured using JWT and role-based access control.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/service-request")
 public class ServiceRequestRestController {

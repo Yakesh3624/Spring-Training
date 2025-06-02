@@ -18,6 +18,17 @@ import com.hexaware.usermicroservice.repository.UsersRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service class that handles business logic related to User operations
+ * such as registration, login, and retrieval of user details.
+ *
+ * This class communicates with the UserRepository to perform CRUD operations.
+ * It also handles exceptions and input validations.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Service
 @Slf4j
 public class UsersServiceImp implements IUsersService {
@@ -144,7 +155,7 @@ public class UsersServiceImp implements IUsersService {
 			log.warn("Credential with user Id : {} does not exist", credential.getUsersId());
 			throw new DataNotFoundException("Credential does not exist");
 		}
-
+		credential.setPassword(passwordEncoder.encode(credential.getPassword()));
 		credentialRepo.save(credential);
 
 		log.info("Credential updated successfully with ID: {}", credential.getUsersId());

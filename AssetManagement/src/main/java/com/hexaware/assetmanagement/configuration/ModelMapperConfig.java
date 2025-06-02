@@ -13,6 +13,20 @@ import com.hexaware.assetmanagement.entities.AssetRequest;
 import com.hexaware.assetmanagement.entities.AuditRequest;
 import com.hexaware.assetmanagement.entities.ServiceRequest;
 
+/**
+ * Configuration class for setting up ModelMapper bean.
+ * 
+ * Provides a ModelMapper instance to be used for object mapping
+ * between DTOs and entity classes throughout the Asset Management System.
+ * 
+ * This configuration enables easy and consistent conversion between
+ * different object models, reducing boilerplate code.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @Configuration
 public class ModelMapperConfig {
 

@@ -16,6 +16,22 @@ import com.hexaware.usermicroservice.entity.Credential;
 import com.hexaware.usermicroservice.exception.DataNotFoundException;
 import com.hexaware.usermicroservice.service.IUsersService;
 
+/**
+ * REST controller for managing user credentials in the Asset Management System.
+ * 
+ * Handles operations such as creating, updating, and validating user credentials.
+ * 
+ * This controller works with the authentication layer to securely manage username,
+ * password, and role mappings stored in the system.
+ * 
+ * Endpoints may include: /create, /updatePassword, /validate, etc.
+ * 
+ * All endpoints are secured and follow best practices for password handling (e.g., hashing).
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/credential")
 public class CredentialRestController {

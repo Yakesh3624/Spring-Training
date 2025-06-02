@@ -18,6 +18,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing the allocation of assets to users in the Asset Management System.
+ * 
+ * Maps to the 'asset_allocation' table and contains details such as
+ * allocation ID, associated user, allocated asset, allocation date, and return date.
+ * 
+ * This entity tracks which assets are currently assigned to which employees,
+ * helping manage asset usage and availability.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
+
 @Entity
 @Setter
 @Getter

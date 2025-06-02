@@ -8,10 +8,10 @@ import com.hexaware.assetmanagement.dto.AssetDTO;
 import com.hexaware.assetmanagement.dto.AssetRequestDTO;
 import com.hexaware.assetmanagement.dto.AuditRequestDTO;
 import com.hexaware.assetmanagement.dto.ServiceRequestDTO;
-import com.hexaware.assetmanagement.entities.ServiceRequest;
 import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 
+// Functionalities of all Services
 public interface IAssetManagementService {
 
 	// Asset operations

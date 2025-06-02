@@ -21,6 +21,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Entity class representing a service request for an asset.
+ * 
+ * Maps to the 'service_request' table and includes details like request ID,
+ * description of the issue, date of request, and the associated asset and user.
+ * 
+ * This entity supports logging and tracking of maintenance or repair tasks
+ * related to organizational assets.
+ * 
+ * Ensures assets remain in working condition and any issues are resolved promptly.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Entity
 @Setter
 @Getter

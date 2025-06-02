@@ -16,6 +16,23 @@ import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
+/**
+ * REST controller for managing audit requests related to assets.
+ * 
+ * Allows users to submit audit requests and view audit status.
+ * 
+ * Admins or auditors can fetch and manage these audit records.
+ * 
+ * Endpoints typically include: /add, /getByAssetId, /getAll, /updateStatus.
+ * 
+ * Helps ensure assets are periodically checked for compliance and integrity.
+ * 
+ * Secured with JWT authentication and role-based permissions.
+ * 
+ * Author: Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/audit-request")
 public class AuditRequestRestController {

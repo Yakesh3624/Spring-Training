@@ -38,3 +38,622 @@
 2025-06-02T00:45:21.778+05:30  INFO 13968 --- [AssetManagement] [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-02T00:45:21.794+05:30  INFO 13968 --- [AssetManagement] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-02T00:45:21.795+05:30  INFO 13968 --- [AssetManagement] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:02:19.538+05:30  INFO 17148 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 17148 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:02:19.540+05:30  INFO 17148 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:02:20.541+05:30  INFO 17148 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:02:20.632+05:30  INFO 17148 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:02:21.293+05:30  INFO 17148 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:02:21.311+05:30  INFO 17148 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:02:21.311+05:30  INFO 17148 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:02:21.378+05:30  INFO 17148 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:02:21.379+05:30  INFO 17148 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1781 ms
+2025-06-02T09:02:21.566+05:30  INFO 17148 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:02:21.641+05:30  INFO 17148 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:02:21.701+05:30  INFO 17148 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:02:22.117+05:30  INFO 17148 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:02:22.163+05:30  INFO 17148 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:02:22.601+05:30  INFO 17148 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e96cb04
+2025-06-02T09:02:22.604+05:30  INFO 17148 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:02:22.680+05:30  WARN 17148 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:02:22.702+05:30  INFO 17148 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:02:24.169+05:30  INFO 17148 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:02:25.011+05:30  INFO 17148 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:02:26.181+05:30  WARN 17148 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:02:26.719+05:30  INFO 17148 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:02:26.728+05:30  INFO 17148 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 7.715 seconds (process running for 8.525)
+2025-06-02T09:03:27.182+05:30  INFO 17148 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:03:27.186+05:30  INFO 17148 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:03:27.194+05:30  INFO 17148 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:03:27.200+05:30  INFO 17148 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:03:27.201+05:30  INFO 17148 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:03:27.214+05:30  INFO 17148 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:03:29.570+05:30  INFO 16684 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 16684 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:03:29.571+05:30  INFO 16684 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:03:30.349+05:30  INFO 16684 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:03:30.425+05:30  INFO 16684 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:03:30.909+05:30  INFO 16684 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:03:30.922+05:30  INFO 16684 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:03:30.923+05:30  INFO 16684 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:03:30.984+05:30  INFO 16684 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:03:30.984+05:30  INFO 16684 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1363 ms
+2025-06-02T09:03:31.145+05:30  INFO 16684 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:03:31.196+05:30  INFO 16684 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:03:31.250+05:30  INFO 16684 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:03:31.516+05:30  INFO 16684 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:03:31.548+05:30  INFO 16684 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:03:31.909+05:30  INFO 16684 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fd5689d
+2025-06-02T09:03:31.911+05:30  INFO 16684 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:03:31.970+05:30  WARN 16684 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:03:31.989+05:30  INFO 16684 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:03:33.013+05:30  INFO 16684 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:03:33.103+05:30  INFO 16684 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:03:33.973+05:30  WARN 16684 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:03:34.429+05:30  INFO 16684 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:03:34.439+05:30  INFO 16684 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 5.322 seconds (process running for 6.005)
+2025-06-02T09:04:13.860+05:30  INFO 16684 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:04:13.864+05:30  INFO 16684 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:04:13.874+05:30  INFO 16684 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:04:13.880+05:30  INFO 16684 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:04:13.884+05:30  INFO 16684 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:04:13.900+05:30  INFO 16684 --- [AssetManagement] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:04:16.144+05:30  INFO 19476 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 19476 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:04:16.147+05:30  INFO 19476 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:04:16.977+05:30  INFO 19476 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:04:17.042+05:30  INFO 19476 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:04:17.551+05:30  INFO 19476 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:04:17.566+05:30  INFO 19476 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:04:17.567+05:30  INFO 19476 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:04:17.627+05:30  INFO 19476 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:04:17.627+05:30  INFO 19476 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2025-06-02T09:04:17.792+05:30  INFO 19476 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:04:17.852+05:30  INFO 19476 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:04:17.895+05:30  INFO 19476 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:04:18.177+05:30  INFO 19476 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:04:18.208+05:30  INFO 19476 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:04:18.580+05:30  INFO 19476 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4db46344
+2025-06-02T09:04:18.582+05:30  INFO 19476 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:04:18.639+05:30  WARN 19476 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:04:18.657+05:30  INFO 19476 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:04:19.774+05:30  INFO 19476 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:04:19.870+05:30  INFO 19476 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:04:20.844+05:30  WARN 19476 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:04:21.334+05:30  INFO 19476 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:04:21.343+05:30  INFO 19476 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 5.634 seconds (process running for 6.325)
+2025-06-02T09:23:49.424+05:30  INFO 19476 --- [AssetManagement] [RMI TCP Connection(28)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:23:49.430+05:30  INFO 19476 --- [AssetManagement] [RMI TCP Connection(28)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:23:49.444+05:30  INFO 19476 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:23:49.477+05:30  INFO 19476 --- [AssetManagement] [RMI TCP Connection(28)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:23:49.479+05:30  INFO 19476 --- [AssetManagement] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:23:49.495+05:30  INFO 19476 --- [AssetManagement] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:27:12.213+05:30  INFO 16192 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 16192 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:27:12.215+05:30  INFO 16192 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:27:13.100+05:30  INFO 16192 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:27:13.176+05:30  INFO 16192 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:27:13.883+05:30  INFO 16192 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:27:13.899+05:30  INFO 16192 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:27:13.900+05:30  INFO 16192 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:27:13.962+05:30  INFO 16192 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:27:13.963+05:30  INFO 16192 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1699 ms
+2025-06-02T09:27:14.129+05:30  INFO 16192 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:27:14.212+05:30  INFO 16192 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:27:14.266+05:30  INFO 16192 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:27:14.699+05:30  INFO 16192 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:27:14.746+05:30  INFO 16192 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:27:15.221+05:30  INFO 16192 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a80c534
+2025-06-02T09:27:15.222+05:30  INFO 16192 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:27:15.286+05:30  WARN 16192 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:27:15.307+05:30  INFO 16192 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:27:16.595+05:30  INFO 16192 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:27:16.707+05:30  INFO 16192 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:27:17.969+05:30  WARN 16192 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:27:18.602+05:30  INFO 16192 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:27:18.610+05:30  INFO 16192 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 6.894 seconds (process running for 7.6)
+2025-06-02T09:27:52.638+05:30  INFO 16192 --- [AssetManagement] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:27:52.642+05:30  INFO 16192 --- [AssetManagement] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:27:52.695+05:30  INFO 16192 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:27:52.700+05:30  INFO 16192 --- [AssetManagement] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:27:52.705+05:30  INFO 16192 --- [AssetManagement] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:27:52.723+05:30  INFO 16192 --- [AssetManagement] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:27:55.864+05:30  INFO 20796 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 20796 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:27:55.867+05:30  INFO 20796 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:27:57.120+05:30  INFO 20796 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:27:57.230+05:30  INFO 20796 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:27:58.126+05:30  INFO 20796 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:27:58.146+05:30  INFO 20796 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:27:58.148+05:30  INFO 20796 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:27:58.241+05:30  INFO 20796 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:27:58.241+05:30  INFO 20796 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2303 ms
+2025-06-02T09:27:58.494+05:30  INFO 20796 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:27:58.562+05:30  INFO 20796 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:27:58.692+05:30  INFO 20796 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:27:59.104+05:30  INFO 20796 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:27:59.161+05:30  INFO 20796 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:27:59.846+05:30  INFO 20796 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36e3321e
+2025-06-02T09:27:59.850+05:30  INFO 20796 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:27:59.948+05:30  WARN 20796 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:27:59.974+05:30  INFO 20796 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:28:01.550+05:30  INFO 20796 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:28:01.658+05:30  INFO 20796 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:28:02.995+05:30  WARN 20796 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:28:03.656+05:30  INFO 20796 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:28:03.665+05:30  INFO 20796 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 8.447 seconds (process running for 9.542)
+2025-06-02T09:33:04.445+05:30  INFO 20796 --- [AssetManagement] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:33:04.450+05:30  INFO 20796 --- [AssetManagement] [RMI TCP Connection(13)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:33:04.458+05:30  INFO 20796 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:33:04.464+05:30  INFO 20796 --- [AssetManagement] [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:33:04.467+05:30  INFO 20796 --- [AssetManagement] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:33:04.478+05:30  INFO 20796 --- [AssetManagement] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:33:15.199+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 19328 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:33:15.201+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:33:16.075+05:30  INFO 19328 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:33:16.152+05:30  INFO 19328 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:33:16.769+05:30  INFO 19328 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:33:16.792+05:30  INFO 19328 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:33:16.792+05:30  INFO 19328 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:33:16.869+05:30  INFO 19328 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:33:16.869+05:30  INFO 19328 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1613 ms
+2025-06-02T09:33:17.070+05:30  INFO 19328 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:33:17.141+05:30  INFO 19328 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:33:17.209+05:30  INFO 19328 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:33:17.523+05:30  INFO 19328 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:33:17.562+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:33:18.040+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@218f2f51
+2025-06-02T09:33:18.045+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:33:18.130+05:30  WARN 19328 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:33:18.147+05:30  INFO 19328 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:33:19.490+05:30  INFO 19328 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:33:19.623+05:30  INFO 19328 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:33:20.739+05:30  WARN 19328 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:33:21.372+05:30  INFO 19328 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:33:21.383+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 6.724 seconds (process running for 7.431)
+2025-06-02T09:34:50.991+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T09:34:50.992+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T09:34:50.996+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-02T09:34:51.231+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T09:35:06.179+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T09:35:06.241+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Asset added successfully with asset number: 2
+2025-06-02T09:36:08.108+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T09:36:08.150+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Asset added successfully with asset number: 3
+2025-06-02T09:36:46.962+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T09:36:47.002+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Asset added successfully with asset number: 4
+2025-06-02T09:38:01.689+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T09:38:01.726+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Asset added successfully with asset number: 5
+2025-06-02T09:40:20.612+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T09:40:20.617+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(11)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T09:40:20.624+05:30  INFO 19328 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T09:40:20.629+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:40:20.632+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T09:40:20.647+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T09:56:22.825+05:30  INFO 9260 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 9260 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T09:56:22.828+05:30  INFO 9260 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T09:56:23.685+05:30  INFO 9260 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T09:56:23.757+05:30  INFO 9260 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2025-06-02T09:56:24.413+05:30  INFO 9260 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T09:56:24.432+05:30  INFO 9260 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T09:56:24.432+05:30  INFO 9260 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T09:56:24.498+05:30  INFO 9260 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T09:56:24.499+05:30  INFO 9260 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1622 ms
+2025-06-02T09:56:24.666+05:30  INFO 9260 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T09:56:24.738+05:30  INFO 9260 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T09:56:24.803+05:30  INFO 9260 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T09:56:25.123+05:30  INFO 9260 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T09:56:25.156+05:30  INFO 9260 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T09:56:25.569+05:30  INFO 9260 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3578a45b
+2025-06-02T09:56:25.573+05:30  INFO 9260 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T09:56:25.632+05:30  WARN 9260 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T09:56:25.652+05:30  INFO 9260 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T09:56:26.900+05:30  INFO 9260 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T09:56:27.009+05:30  INFO 9260 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T09:56:28.161+05:30  WARN 9260 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T09:56:28.774+05:30  INFO 9260 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T09:56:28.785+05:30  INFO 9260 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 6.47 seconds (process running for 7.247)
+2025-06-02T10:22:35.163+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T10:22:35.165+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T10:22:35.169+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-02T10:22:35.407+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 4 for the asset ID: 2
+2025-06-02T10:22:35.940+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 1
+2025-06-02T10:23:16.966+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T10:23:16.996+05:30  INFO 9260 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests.
+2025-06-02T10:30:05.650+05:30  INFO 9260 --- [AssetManagement] [RMI TCP Connection(43)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T10:30:05.653+05:30  INFO 9260 --- [AssetManagement] [RMI TCP Connection(43)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T10:30:05.658+05:30  INFO 9260 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T10:30:05.662+05:30  INFO 9260 --- [AssetManagement] [RMI TCP Connection(43)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T10:30:05.664+05:30  INFO 9260 --- [AssetManagement] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T10:30:05.668+05:30  INFO 9260 --- [AssetManagement] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T10:30:07.586+05:30  INFO 4136 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 4136 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T10:30:07.589+05:30  INFO 4136 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T10:30:08.283+05:30  INFO 4136 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T10:30:08.343+05:30  INFO 4136 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces.
+2025-06-02T10:30:08.816+05:30  INFO 4136 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T10:30:08.832+05:30  INFO 4136 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T10:30:08.832+05:30  INFO 4136 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T10:30:08.886+05:30  INFO 4136 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T10:30:08.886+05:30  INFO 4136 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1261 ms
+2025-06-02T10:30:09.012+05:30  INFO 4136 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T10:30:09.051+05:30  INFO 4136 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T10:30:09.086+05:30  INFO 4136 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T10:30:09.336+05:30  INFO 4136 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T10:30:09.360+05:30  INFO 4136 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T10:30:09.674+05:30  INFO 4136 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a80c534
+2025-06-02T10:30:09.676+05:30  INFO 4136 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T10:30:09.725+05:30  WARN 4136 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T10:30:09.739+05:30  INFO 4136 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T10:30:10.658+05:30  INFO 4136 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T10:30:10.744+05:30  INFO 4136 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T10:30:11.596+05:30  WARN 4136 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T10:30:12.092+05:30  INFO 4136 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T10:30:12.099+05:30  INFO 4136 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 4.878 seconds (process running for 5.406)
+2025-06-02T10:30:16.034+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T10:30:16.034+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T10:30:16.035+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-02T10:38:04.757+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 1, New Status: approved
+2025-06-02T10:38:04.870+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 1 with new status: approved
+2025-06-02T10:38:04.997+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 1
+2025-06-02T10:38:05.002+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 1
+2025-06-02T10:39:52.922+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 1, New Status: approved
+2025-06-02T10:39:52.925+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Asset request with ID 1 not found for status update
+2025-06-02T10:40:06.523+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching all service requests
+2025-06-02T10:40:06.668+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : No service requests found
+2025-06-02T10:41:09.240+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 2 for the asset ID: 2
+2025-06-02T10:41:09.310+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 2
+2025-06-02T10:41:24.593+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 2, New Status: approved
+2025-06-02T10:41:24.603+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 2 with new status: approved
+2025-06-02T10:41:24.616+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 2
+2025-06-02T10:41:24.622+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 2
+2025-06-02T10:42:03.280+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching all asset allocations
+2025-06-02T10:42:03.298+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations
+2025-06-02T11:05:28.654+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 2 for the asset ID: 2
+2025-06-02T11:05:28.687+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 3
+2025-06-02T11:05:49.039+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T11:05:49.059+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests.
+2025-06-02T11:06:01.634+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 2, New Status: approved
+2025-06-02T11:06:01.638+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Asset request with ID 2 not found for status update
+2025-06-02T11:06:26.034+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching service requests for userId=2
+2025-06-02T11:06:26.039+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : No service requests found for userId=2
+2025-06-02T11:07:01.572+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 3, New Status: approved
+2025-06-02T11:07:01.578+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 3 with new status: approved
+2025-06-02T11:07:01.594+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 3
+2025-06-02T11:07:01.599+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 3
+2025-06-02T11:07:15.981+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching service requests for userId=2
+2025-06-02T11:07:15.985+05:30  WARN 4136 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : No service requests found for userId=2
+2025-06-02T11:08:07.070+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocations for user ID: 2
+2025-06-02T11:08:07.080+05:30  INFO 4136 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Found 1 asset allocations for user ID: 2
+2025-06-02T11:22:40.884+05:30  INFO 4136 --- [AssetManagement] [RMI TCP Connection(63)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T11:22:40.888+05:30  INFO 4136 --- [AssetManagement] [RMI TCP Connection(63)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T11:22:40.893+05:30  INFO 4136 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T11:22:40.897+05:30  INFO 4136 --- [AssetManagement] [RMI TCP Connection(63)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T11:22:40.900+05:30  INFO 4136 --- [AssetManagement] [RMI TCP Connection(63)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T11:22:40.905+05:30  INFO 4136 --- [AssetManagement] [RMI TCP Connection(63)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T11:22:42.778+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 19328 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T11:22:42.780+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T11:22:43.450+05:30  INFO 19328 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T11:22:43.521+05:30  INFO 19328 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2025-06-02T11:22:43.998+05:30  INFO 19328 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T11:22:44.010+05:30  INFO 19328 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T11:22:44.010+05:30  INFO 19328 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T11:22:44.059+05:30  INFO 19328 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T11:22:44.059+05:30  INFO 19328 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2025-06-02T11:22:44.204+05:30  INFO 19328 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T11:22:44.246+05:30  INFO 19328 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T11:22:44.287+05:30  INFO 19328 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T11:22:44.527+05:30  INFO 19328 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T11:22:44.553+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T11:22:44.878+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75d539b9
+2025-06-02T11:22:44.880+05:30  INFO 19328 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T11:22:44.929+05:30  WARN 19328 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T11:22:44.945+05:30  INFO 19328 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T11:22:45.944+05:30  INFO 19328 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T11:22:46.039+05:30  INFO 19328 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T11:22:46.908+05:30  WARN 19328 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T11:22:47.331+05:30  INFO 19328 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T11:22:47.338+05:30  INFO 19328 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 4.912 seconds (process running for 5.391)
+2025-06-02T11:23:55.667+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T11:23:55.667+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T11:23:55.669+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-02T11:23:55.747+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetch all assets
+2025-06-02T11:23:55.971+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetched all assets
+2025-06-02T11:52:02.715+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 2 for the asset ID: 2
+2025-06-02T11:52:02.891+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 52
+2025-06-02T11:52:20.022+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T11:52:20.036+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests.
+2025-06-02T11:52:57.859+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 52, New Status: approved
+2025-06-02T11:52:57.903+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 52 with new status: approved
+2025-06-02T11:52:57.918+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 52
+2025-06-02T11:52:57.926+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 52
+2025-06-02T11:56:48.638+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocations for user ID: 2
+2025-06-02T11:56:48.648+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Found 1 asset allocations for user ID: 2
+2025-06-02T12:05:38.454+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Attempting to add service request for userId=2 and assetNo=2
+2025-06-02T12:05:38.488+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Service request created successfully for requestId=1
+2025-06-02T12:05:57.778+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching all service requests
+2025-06-02T12:06:08.185+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching service requests for userId=2
+2025-06-02T12:06:19.178+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching service requests with status='pending'
+2025-06-02T12:06:31.078+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetching service requests with status='rejected'
+2025-06-02T12:06:31.084+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : No service requests found with status 'rejected'
+2025-06-02T12:06:42.520+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching service request with ID=1
+2025-06-02T12:06:55.385+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching service requests with issueType='malfunction'
+2025-06-02T12:07:02.426+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching service requests with issueType='repair'
+2025-06-02T12:07:02.430+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : No service requests found with issueType 'repair'
+2025-06-02T12:07:28.985+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching all audit requests
+2025-06-02T12:07:28.994+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : No audit requests found in the database.
+2025-06-02T12:07:54.842+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Adding a new audit request for userId: 2 for the asset ID: 2
+2025-06-02T12:07:54.886+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Audit request saved with ID: 1
+2025-06-02T12:08:11.536+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Fetching all audit requests
+2025-06-02T12:08:11.551+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 audit requests.
+2025-06-02T12:08:19.233+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching audit requests for usersId: 2
+2025-06-02T12:08:19.249+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 audit requests for userId: 2
+2025-06-02T12:08:30.052+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching audit requests with status: pending
+2025-06-02T12:08:30.065+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 audit requests with status: pending
+2025-06-02T12:08:37.665+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching audit request with ID: 1
+2025-06-02T12:08:37.674+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Audit request found with ID: 1
+2025-06-02T12:08:44.578+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetch all assets
+2025-06-02T12:08:44.584+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetched all assets
+2025-06-02T12:08:55.917+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching asset by category: gadgets
+2025-06-02T12:08:55.927+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetched asset with category: gadgets
+2025-06-02T12:09:09.675+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching asset by availability: unavailable
+2025-06-02T12:09:09.683+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetched asset with availability: unavailable
+2025-06-02T12:09:57.586+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching asset with asset number: 2
+2025-06-02T12:09:57.594+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetched asset with asset number: 2
+2025-06-02T12:10:04.434+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T12:10:04.442+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : No Asset requests found in the database.
+2025-06-02T12:11:54.261+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Attempting to add Asset with asset number: null
+2025-06-02T12:11:54.285+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Asset added successfully with asset number: 52
+2025-06-02T12:12:41.610+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Allocating asset 52 to user 2 with return date 2025-09-12
+2025-06-02T12:12:41.619+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Allocated asset 52 to user 2 with return date 2025-09-12
+2025-06-02T12:13:24.528+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T12:13:24.534+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : No Asset requests found in the database.
+2025-06-02T12:13:27.135+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T12:13:27.142+05:30  WARN 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : No Asset requests found in the database.
+2025-06-02T12:13:39.779+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetching all asset allocations
+2025-06-02T12:13:39.793+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations
+2025-06-02T12:13:49.213+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocations for user ID: 2
+2025-06-02T12:13:49.225+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations for user ID: 2
+2025-06-02T12:13:58.713+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocation with asset number: 52
+2025-06-02T12:13:58.725+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Found asset allocation with asset number: 52
+2025-06-02T12:14:06.835+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocation with ID: 1
+2025-06-02T12:14:06.845+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Found asset allocation with ID: 1
+2025-06-02T12:15:17.196+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Updating status of service request with ID=1 to 'Approved'
+2025-06-02T12:15:17.218+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Fetching service request with ID=1
+2025-06-02T12:16:16.660+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Attempting to update audit request status. Request ID: 1, New Status: Rejected
+2025-06-02T12:16:16.663+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Successfully updated audit request ID: 1 with new status: Rejected
+2025-06-02T12:16:16.674+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching audit request with ID: 1
+2025-06-02T12:16:16.680+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Audit request found with ID: 1
+2025-06-02T12:17:51.739+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Attempting to update asset with asset number: 5
+2025-06-02T12:17:51.764+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Asset updated successfully with asset number: 5
+2025-06-02T12:17:51.770+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching asset with asset number: 5
+2025-06-02T12:17:51.775+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetched asset with asset number: 5
+2025-06-02T12:18:22.078+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Attempting to update asset availability with asset number: 5
+2025-06-02T12:18:22.085+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Asset availability updated successfully with asset number: 5
+2025-06-02T12:18:22.097+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching asset with asset number: 5
+2025-06-02T12:18:22.100+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetched asset with asset number: 5
+2025-06-02T12:18:36.462+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Attempting to update asset availability with asset number: 5
+2025-06-02T12:18:36.469+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Asset availability updated successfully with asset number: 5
+2025-06-02T12:18:36.484+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetching asset with asset number: 5
+2025-06-02T12:18:36.488+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetched asset with asset number: 5
+2025-06-02T12:19:29.980+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 2 for the asset ID: 4
+2025-06-02T12:19:30.015+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 53
+2025-06-02T12:19:58.199+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 53, New Status: rejected
+2025-06-02T12:19:58.202+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 53 with new status: rejected
+2025-06-02T12:19:58.219+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 53
+2025-06-02T12:19:58.225+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Asset request found with ID: 53
+2025-06-02T12:25:15.363+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Returning asset with allocation ID: 2
+2025-06-02T12:25:15.370+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Deleted asset allocation with ID: 2
+2025-06-02T12:45:05.329+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Updating status of service request with ID=1 to 'Completed'
+2025-06-02T12:45:05.337+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Service request with ID=1 marked as completed and deleted
+2025-06-02T12:45:05.378+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching service request with ID=1
+2025-06-02T12:45:05.383+05:30 ERROR 19328 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Service request with ID 1 not found
+2025-06-02T12:46:10.350+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Attempting to add service request for userId=2 and assetNo=2
+2025-06-02T12:46:10.383+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Service request created successfully for requestId=2
+2025-06-02T12:46:30.660+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Fetching all service requests
+2025-06-02T12:47:51.824+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 2 for the asset ID: 4
+2025-06-02T12:47:51.869+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 54
+2025-06-02T12:48:17.758+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 4 for the asset ID: 4
+2025-06-02T12:48:17.803+05:30  INFO 19328 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 55
+2025-06-02T12:51:00.228+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(98)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T12:51:00.234+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(98)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T12:51:00.241+05:30  INFO 19328 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T12:51:00.246+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(98)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T12:51:00.253+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(98)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T12:51:00.258+05:30  INFO 19328 --- [AssetManagement] [RMI TCP Connection(98)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T12:51:03.012+05:30  INFO 24596 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 24596 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T12:51:03.014+05:30  INFO 24596 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T12:51:03.913+05:30  INFO 24596 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T12:51:03.998+05:30  INFO 24596 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 6 JPA repository interfaces.
+2025-06-02T12:51:04.607+05:30  INFO 24596 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T12:51:04.622+05:30  INFO 24596 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T12:51:04.622+05:30  INFO 24596 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T12:51:04.689+05:30  INFO 24596 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T12:51:04.690+05:30  INFO 24596 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1625 ms
+2025-06-02T12:51:04.853+05:30  INFO 24596 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T12:51:04.917+05:30  INFO 24596 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T12:51:04.977+05:30  INFO 24596 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T12:51:05.311+05:30  INFO 24596 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T12:51:05.352+05:30  INFO 24596 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T12:51:05.780+05:30  INFO 24596 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f166f2e
+2025-06-02T12:51:05.782+05:30  INFO 24596 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T12:51:05.840+05:30  WARN 24596 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T12:51:05.859+05:30  INFO 24596 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T12:51:07.084+05:30  INFO 24596 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T12:51:07.188+05:30  INFO 24596 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T12:51:08.313+05:30  WARN 24596 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T12:51:08.973+05:30  INFO 24596 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T12:51:08.984+05:30  INFO 24596 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 6.533 seconds (process running for 7.283)
+2025-06-02T12:51:09.754+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T12:51:09.755+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T12:51:09.756+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-02T12:51:09.801+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T12:51:10.007+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests for userId: 4
+2025-06-02T12:51:23.081+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching audit requests for usersId: 2
+2025-06-02T12:51:23.101+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 audit requests for userId: 2
+2025-06-02T12:52:46.350+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Attempting to add service request for userId=4 and assetNo=2
+2025-06-02T12:52:46.540+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Service request created successfully for requestId=52
+2025-06-02T12:55:00.793+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T12:55:00.846+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests for userId: 4
+2025-06-02T12:55:11.180+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests with status: pending
+2025-06-02T12:55:11.191+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests with status: pending
+2025-06-02T12:55:22.339+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T12:55:22.362+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 2 Asset requests.
+2025-06-02T12:55:38.835+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 52
+2025-06-02T12:55:38.845+05:30  WARN 24596 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 52
+2025-06-02T12:55:58.092+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 53
+2025-06-02T12:55:58.100+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Asset request found with ID: 53
+2025-06-02T12:56:31.674+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching audit requests with status: pending
+2025-06-02T12:56:31.685+05:30  WARN 24596 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : No audit requests found with status: pending
+2025-06-02T12:57:04.745+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 55, New Status: approved
+2025-06-02T12:57:04.779+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 55 with new status: approved
+2025-06-02T12:57:04.808+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 55
+2025-06-02T12:57:04.813+05:30  WARN 24596 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 55
+2025-06-02T12:57:26.127+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetching all asset allocations
+2025-06-02T12:57:26.143+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations
+2025-06-02T14:11:36.863+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T14:11:36.884+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests.
+2025-06-02T14:11:47.695+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T14:11:47.701+05:30  WARN 24596 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : No Asset requests found for usersId: 4
+2025-06-02T14:11:54.054+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 2
+2025-06-02T14:11:54.103+05:30  INFO 24596 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests for userId: 2
+2025-06-02T14:38:02.063+05:30  INFO 24596 --- [AssetManagement] [RMI TCP Connection(116)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T14:38:02.117+05:30  INFO 24596 --- [AssetManagement] [RMI TCP Connection(116)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T14:38:02.133+05:30  INFO 24596 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T14:38:02.156+05:30  INFO 24596 --- [AssetManagement] [RMI TCP Connection(116)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T14:38:02.176+05:30  INFO 24596 --- [AssetManagement] [RMI TCP Connection(116)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T14:38:02.186+05:30  INFO 24596 --- [AssetManagement] [RMI TCP Connection(116)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T14:38:04.796+05:30  INFO 21544 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Starting AssetManagementApplication using Java 21.0.6 with PID 21544 (C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement\target\classes started by Yakesh in C:\Users\Yakesh\Downloads\Spring Training Repo\Spring-Training\AssetManagement)
+2025-06-02T14:38:04.798+05:30  INFO 21544 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T14:38:05.641+05:30  INFO 21544 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T14:38:05.730+05:30  INFO 21544 --- [AssetManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 6 JPA repository interfaces.
+2025-06-02T14:38:06.424+05:30  INFO 21544 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T14:38:06.441+05:30  INFO 21544 --- [AssetManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T14:38:06.441+05:30  INFO 21544 --- [AssetManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-02T14:38:06.508+05:30  INFO 21544 --- [AssetManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T14:38:06.509+05:30  INFO 21544 --- [AssetManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
+2025-06-02T14:38:06.675+05:30  INFO 21544 --- [AssetManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T14:38:06.754+05:30  INFO 21544 --- [AssetManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-02T14:38:06.795+05:30  INFO 21544 --- [AssetManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T14:38:07.090+05:30  INFO 21544 --- [AssetManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T14:38:07.123+05:30  INFO 21544 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T14:38:07.569+05:30  INFO 21544 --- [AssetManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ff542a3
+2025-06-02T14:38:07.572+05:30  INFO 21544 --- [AssetManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T14:38:07.630+05:30  WARN 21544 --- [AssetManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-02T14:38:07.647+05:30  INFO 21544 --- [AssetManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T14:38:08.874+05:30  INFO 21544 --- [AssetManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T14:38:08.981+05:30  INFO 21544 --- [AssetManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T14:38:10.091+05:30  WARN 21544 --- [AssetManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-02T14:38:10.647+05:30  INFO 21544 --- [AssetManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T14:38:10.660+05:30  INFO 21544 --- [AssetManagement] [main] c.h.a.AssetManagementApplication         : Started AssetManagementApplication in 6.401 seconds (process running for 7.18)
+2025-06-02T14:49:50.146+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-02T14:49:50.148+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-02T14:49:50.152+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-02T14:49:50.268+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Updating status of service request with ID=2 to 'Pending'
+2025-06-02T14:49:50.569+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-2] c.h.a.s.AssetManagementServiceImp        : Fetching service request with ID=2
+2025-06-02T15:34:06.462+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 4 for the asset ID: 4
+2025-06-02T15:34:06.611+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 102
+2025-06-02T15:34:54.107+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T15:34:54.130+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-5] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 1 Asset requests for userId: 4
+2025-06-02T15:35:08.234+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 102, New Status: approved
+2025-06-02T15:35:08.253+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 102 with new status: approved
+2025-06-02T15:35:08.266+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 102
+2025-06-02T15:35:08.268+05:30  WARN 21544 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 102
+2025-06-02T15:36:02.217+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T15:36:02.227+05:30  WARN 21544 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : No Asset requests found for usersId: 4
+2025-06-02T15:37:49.954+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching Asset requests for usersId: 4
+2025-06-02T15:37:49.962+05:30  WARN 21544 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : No Asset requests found for usersId: 4
+2025-06-02T15:37:59.005+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 4 for the asset ID: 4
+2025-06-02T15:37:59.022+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 103
+2025-06-02T15:39:31.424+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Returning asset with allocation ID: 4
+2025-06-02T15:39:31.431+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-3] c.h.a.s.AssetManagementServiceImp        : Deleted asset allocation with ID: 4
+2025-06-02T15:39:46.246+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Fetching all asset allocations
+2025-06-02T15:39:46.258+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-4] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations
+2025-06-02T16:23:13.507+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Adding a new asset request for userId: 4 for the asset ID: 3
+2025-06-02T16:23:13.569+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-6] c.h.a.s.AssetManagementServiceImp        : Asset request saved with ID: 104
+2025-06-02T16:23:51.522+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Fetching all Asset requests
+2025-06-02T16:23:51.545+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-7] c.h.a.s.AssetManagementServiceImp        : Successfully retrieved 3 Asset requests.
+2025-06-02T16:24:18.219+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Attempting to update Asset request status. Request ID: 104, New Status: approved
+2025-06-02T16:24:18.234+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-8] c.h.a.s.AssetManagementServiceImp        : Successfully updated Asset request ID: 104 with new status: approved
+2025-06-02T16:24:18.278+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Fetching Asset request with ID: 104
+2025-06-02T16:24:18.282+05:30  WARN 21544 --- [AssetManagement] [http-nio-8081-exec-10] c.h.a.s.AssetManagementServiceImp        : Asset request not found with ID: 104
+2025-06-02T16:24:37.882+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : Fetching audit requests for usersId: 4
+2025-06-02T16:24:37.889+05:30  WARN 21544 --- [AssetManagement] [http-nio-8081-exec-9] c.h.a.s.AssetManagementServiceImp        : No audit requests found for usersId: 4
+2025-06-02T16:25:05.517+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Fetching asset allocations for user ID: 4
+2025-06-02T16:25:05.530+05:30  INFO 21544 --- [AssetManagement] [http-nio-8081-exec-1] c.h.a.s.AssetManagementServiceImp        : Found 2 asset allocations for user ID: 4
+2025-06-02T17:57:49.793+05:30  INFO 21544 --- [AssetManagement] [RMI TCP Connection(209)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T17:57:49.837+05:30  INFO 21544 --- [AssetManagement] [RMI TCP Connection(209)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T17:57:49.848+05:30  INFO 21544 --- [AssetManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T17:57:49.869+05:30  INFO 21544 --- [AssetManagement] [RMI TCP Connection(209)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T17:57:49.883+05:30  INFO 21544 --- [AssetManagement] [RMI TCP Connection(209)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T17:57:49.890+05:30  INFO 21544 --- [AssetManagement] [RMI TCP Connection(209)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

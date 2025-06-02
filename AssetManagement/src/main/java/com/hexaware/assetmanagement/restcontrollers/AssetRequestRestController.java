@@ -16,6 +16,23 @@ import com.hexaware.assetmanagement.exceptions.DataAlreadyExistException;
 import com.hexaware.assetmanagement.exceptions.DataNotFoundException;
 import com.hexaware.assetmanagement.services.IAssetManagementService;
 
+/**
+ * REST controller for handling asset request operations.
+ * 
+ * Allows employees to request assets and view the status of their requests.
+ * 
+ * Admins can approve or reject asset requests.
+ * 
+ * Endpoints typically include: /add, /getByUserId, /getAll, /updateStatus, etc.
+ * 
+ * This controller ensures smooth asset allocation workflow between employees and admin.
+ * 
+ * Secured with JWT and role-based authorization.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @RestController
 @RequestMapping("/api/asset-request")
 public class AssetRequestRestController {
@@ -34,7 +51,7 @@ public class AssetRequestRestController {
 		return service.getAllAssetRequests();
 	}
 
-	@GetMapping("/get/userId/{usersId}")
+	@GetMapping("/get/usersId/{usersId}")
 	public List<AssetRequestDTO> getAssetRequestsByUsersId(@PathVariable Long usersId) throws DataNotFoundException {
 		return service.getAssetRequestsByUsersId(usersId);
 	}

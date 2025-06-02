@@ -19,6 +19,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+
+/**
+ * Entity class representing a request made by a user to borrow or access an asset.
+ * 
+ * Maps to the 'asset_request' table and includes fields such as request ID,
+ * user reference, asset reference, request date, and status.
+ * 
+ * This entity helps track asset allocation requests and their approval status.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Entity
 @Setter
 @Getter

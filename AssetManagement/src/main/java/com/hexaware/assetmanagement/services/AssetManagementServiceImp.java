@@ -32,6 +32,19 @@ import com.hexaware.assetmanagement.repositories.UsersRepository;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service class responsible for handling all business logic related to asset management.
+ * 
+ * This includes operations such as adding, updating, retrieving, and listing assets,
+ * as well as managing asset availability and category-based queries.
+ * 
+ * Acts as an intermediary between the controller layer and the repository layer,
+ * ensuring that asset-related transactions follow business rules and validations.
+ * 
+ * @author Yakesh
+ * @version 1.0
+ * @since 2025-05-28
+ */
 @Service
 @Slf4j
 public class AssetManagementServiceImp implements IAssetManagementService {
